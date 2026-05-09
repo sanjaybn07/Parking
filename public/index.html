@@ -1,0 +1,4876 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garuda Mall Parking — Bangalore</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    /* ════════════════════════════════════════════════
+   CSS CUSTOM PROPERTIES — DARK & LIGHT THEMES
+════════════════════════════════════════════════ */
+    [data-theme="dark"] {
+      --bg: #07090f;
+      --bg2: #0d1020;
+      --bg3: #121525;
+      --bg4: #181c30;
+      --card: #161929;
+      --card2: #1c2035;
+      --border: rgba(255, 255, 255, 0.07);
+      --border2: rgba(255, 255, 255, 0.13);
+      --text: #e8ebf5;
+      --text2: #a0a8c0;
+      --text3: #6b7494;
+      --gold: #d4993a;
+      --gold2: #f0b84a;
+      --gold-bg: rgba(212, 153, 58, 0.12);
+      --gold-border: rgba(212, 153, 58, 0.28);
+      --green: #16a34a;
+      --green2: #22c55e;
+      --green-bg: rgba(22, 197, 94, 0.1);
+      --red: #dc2626;
+      --red2: #ef4444;
+      --red-bg: rgba(239, 68, 68, 0.1);
+      --blue: #2563eb;
+      --blue2: #3b82f6;
+      --blue-bg: rgba(59, 130, 246, 0.1);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      --nav-bg: rgba(7, 9, 15, 0.93);
+      --hero-ov: linear-gradient(105deg, rgba(7, 9, 15, 0.97) 35%, rgba(7, 9, 15, 0.35) 70%, rgba(7, 9, 15, 0.1) 100%), linear-gradient(to top, rgba(7, 9, 15, 1) 0%, transparent 30%);
+    }
+
+    [data-theme="light"] {
+      --bg: #f8f9fc;
+      --bg2: #ffffff;
+      --bg3: #f0f2f8;
+      --bg4: #e8eaf4;
+      --card: #ffffff;
+      --card2: #f4f5fb;
+      --border: rgba(0, 0, 0, 0.08);
+      --border2: rgba(0, 0, 0, 0.15);
+      --text: #0f1223;
+      --text2: #4a5270;
+      --text3: #8890aa;
+      --gold: #b8821e;
+      --gold2: #d4993a;
+      --gold-bg: rgba(184, 130, 30, 0.1);
+      --gold-border: rgba(184, 130, 30, 0.3);
+      --green: #15803d;
+      --green2: #16a34a;
+      --green-bg: rgba(22, 163, 74, 0.08);
+      --red: #b91c1c;
+      --red2: #dc2626;
+      --red-bg: rgba(220, 38, 38, 0.08);
+      --blue: #1d4ed8;
+      --blue2: #2563eb;
+      --blue-bg: rgba(37, 99, 235, 0.08);
+      --shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+      --nav-bg: rgba(248, 249, 252, 0.95);
+      --hero-ov: linear-gradient(105deg, rgba(248, 249, 252, 0.97) 35%, rgba(248, 249, 252, 0.5) 65%, rgba(248, 249, 252, 0.05) 100%), linear-gradient(to top, rgba(248, 249, 252, 1) 0%, transparent 30%);
+    }
+
+    /* ════ RESET & BASE ════ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      transition: background .4s, color .4s
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg)
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--bg4);
+      border-radius: 2px
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    /* ════ ANIMATIONS ════ */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(32px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fadeLeft {
+      from {
+        opacity: 0;
+        transform: translateX(32px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0)
+      }
+    }
+
+    @keyframes fadeRight {
+      from {
+        opacity: 0;
+        transform: translateX(-32px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0)
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(.92)
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1)
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .4;
+        transform: scale(.75)
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -200% 0
+      }
+
+      100% {
+        background-position: 200% 0
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg)
+      }
+
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    @keyframes countUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes borderFlow {
+      0% {
+        border-color: var(--gold)
+      }
+
+      50% {
+        border-color: var(--gold2)
+      }
+
+      100% {
+        border-color: var(--gold)
+      }
+    }
+
+    @keyframes ripple {
+      0% {
+        transform: scale(0);
+        opacity: 1
+      }
+
+      100% {
+        transform: scale(4);
+        opacity: 0
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s cubic-bezier(.22, 1, .36, 1), transform .7s cubic-bezier(.22, 1, .36, 1)
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-28px);
+      transition: opacity .7s cubic-bezier(.22, 1, .36, 1), transform .7s cubic-bezier(.22, 1, .36, 1)
+    }
+
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0)
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(28px);
+      transition: opacity .7s cubic-bezier(.22, 1, .36, 1), transform .7s cubic-bezier(.22, 1, .36, 1)
+    }
+
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0)
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(.94);
+      transition: opacity .6s cubic-bezier(.22, 1, .36, 1), transform .6s cubic-bezier(.22, 1, .36, 1)
+    }
+
+    .reveal-scale.visible {
+      opacity: 1;
+      transform: scale(1)
+    }
+
+    /* ════ NAV ════ */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 900;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4vw;
+      background: var(--nav-bg);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: background .4s;
+      animation: slideDown .5s ease
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -.5px;
+      cursor: pointer
+    }
+
+    .nav-logo em {
+      font-style: normal;
+      color: var(--gold)
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none
+    }
+
+    .nav-links a {
+      font-size: .83rem;
+      font-weight: 500;
+      color: var(--text2);
+      transition: color .2s
+    }
+
+    .nav-links a:hover {
+      color: var(--text)
+    }
+
+    .nav-right {
+      display: flex;
+      gap: .6rem;
+      align-items: center
+    }
+
+    .theme-toggle {
+      width: 42px;
+      height: 24px;
+      border-radius: 12px;
+      background: var(--bg4);
+      border: 1px solid var(--border2);
+      cursor: pointer;
+      position: relative;
+      transition: all .3s
+    }
+
+    .theme-toggle::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--gold);
+      top: 2px;
+      left: 3px;
+      transition: transform .3s
+    }
+
+    [data-theme="light"] .theme-toggle::after {
+      transform: translateX(18px)
+    }
+
+    .theme-icon {
+      font-size: .9rem;
+      position: absolute;
+      top: 3px;
+      transition: opacity .3s
+    }
+
+    .sun-icon {
+      right: 4px;
+      opacity: 0
+    }
+
+    .moon-icon {
+      left: 4px;
+      opacity: 1
+    }
+
+    [data-theme="light"] .sun-icon {
+      opacity: 1
+    }
+
+    [data-theme="light"] .moon-icon {
+      opacity: 0
+    }
+
+    /* ════ BUTTONS ════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: .85rem;
+      cursor: pointer;
+      transition: all .25s;
+      padding: .55rem 1.2rem;
+      position: relative;
+      overflow: hidden
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, .1);
+      opacity: 0;
+      transition: opacity .2s
+    }
+
+    .btn:hover::after {
+      opacity: 1
+    }
+
+    .btn:active {
+      transform: scale(.97)
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #000
+    }
+
+    .btn-gold:hover {
+      background: var(--gold2);
+      box-shadow: 0 6px 24px rgba(212, 153, 58, .4);
+      transform: translateY(-1px)
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border2)
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold)
+    }
+
+    .btn-ghost {
+      background: var(--bg3);
+      color: var(--text2);
+      border: 1px solid var(--border)
+    }
+
+    .btn-ghost:hover {
+      color: var(--text);
+      border-color: var(--border2)
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: #fff
+    }
+
+    .btn-green:hover {
+      background: var(--green2)
+    }
+
+    .btn-red {
+      background: var(--red);
+      color: #fff
+    }
+
+    .btn-red:hover {
+      background: var(--red2)
+    }
+
+
+
+    .btn-lg {
+      padding: .82rem 1.8rem;
+      font-size: .95rem
+    }
+
+    .btn-sm {
+      padding: .38rem .85rem;
+      font-size: .78rem
+    }
+
+    .btn-xs {
+      padding: .28rem .65rem;
+      font-size: .72rem;
+      border-radius: 6px
+    }
+
+    /* ════ CARDS ════ */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      transition: border-color .3s, box-shadow .3s, transform .3s
+    }
+
+    .card:hover {
+      border-color: var(--border2);
+      box-shadow: var(--shadow)
+    }
+
+    .card-gold {
+      border-color: var(--gold-border);
+      box-shadow: 0 0 30px var(--gold-bg)
+    }
+
+    /* ════ BADGES ════ */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: .22rem .7rem;
+      border-radius: 50px;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .04em
+    }
+
+    .badge-green {
+      background: var(--green-bg);
+      color: var(--green2);
+      border: 1px solid rgba(34, 197, 94, .2)
+    }
+
+    .badge-red {
+      background: var(--red-bg);
+      color: var(--red2);
+      border: 1px solid rgba(239, 68, 68, .2)
+    }
+
+    .badge-gold {
+      background: var(--gold-bg);
+      color: var(--gold);
+      border: 1px solid var(--gold-border)
+    }
+
+    .badge-blue {
+      background: var(--blue-bg);
+      color: var(--blue2);
+      border: 1px solid rgba(59, 130, 246, .2)
+    }
+
+    .badge-gray {
+      background: var(--bg3);
+      color: var(--text2);
+      border: 1px solid var(--border)
+    }
+
+    /* ════ SECTION ════ */
+    .sec {
+      padding: 6rem 4vw
+    }
+
+    .sec-alt {
+      background: var(--bg2)
+    }
+
+    .eyebrow {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .75rem
+    }
+
+    h2.sec-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.13;
+      letter-spacing: -.5px;
+      margin-bottom: .9rem
+    }
+
+    .sec-lead {
+      color: var(--text2);
+      font-size: .97rem;
+      line-height: 1.78;
+      max-width: 540px;
+      margin-bottom: 2.8rem
+    }
+
+    .sec-center {
+      text-align: center
+    }
+
+    .sec-center .sec-lead {
+      margin: 0 auto 2.8rem
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0
+    }
+
+    /* ════ HERO ════ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      transition: opacity .5s
+    }
+
+    .hero-ov {
+      position: absolute;
+      inset: 0;
+      background: var(--hero-ov);
+      transition: background .4s
+    }
+
+    .hero-body {
+      position: relative;
+      z-index: 2;
+      padding: 0 4vw 9vh;
+      max-width: 680px
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      color: var(--text2);
+      padding: .6rem 1.4rem;
+      border-radius: 50px;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      animation: fadeUp .8s ease both;
+      z-index: 5;
+    }
+
+    .hero-badge .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--green2);
+      border-radius: 50%;
+      animation: pulse 1.8s infinite
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.6rem);
+      line-height: 1.07;
+      letter-spacing: -1.5px;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      animation: fadeUp .8s .1s ease both
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold)
+    }
+
+    .hero-p {
+      color: var(--text2);
+      font-size: 1rem;
+      line-height: 1.78;
+      max-width: 500px;
+      margin-bottom: 2.2rem;
+      animation: fadeUp .8s .2s ease both
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: .9rem;
+      flex-wrap: wrap;
+      animation: fadeUp .8s .3s ease both
+    }
+
+    .hero-ribbon {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      display: flex;
+      border-top: 1px solid var(--border);
+      background: var(--nav-bg);
+      backdrop-filter: blur(16px);
+      animation: fadeIn 1s .5s ease both
+    }
+
+    .hstat {
+      padding: 1.2rem 1.8rem;
+      text-align: center;
+      border-left: 1px solid var(--border)
+    }
+
+    .hstat .hn {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--gold)
+    }
+
+    .hstat .hl {
+      font-size: .65rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-top: 3px
+    }
+
+    /* ════ SLOT MAP ════ */
+    .slot-wrap {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 2.5rem;
+      align-items: start
+    }
+
+    .slot-panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color .3s
+    }
+
+    .panel-hd {
+      padding: 1.2rem 1.4rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .panel-hd h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: .98rem;
+      font-weight: 700
+    }
+
+    .live-pill {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--green-bg);
+      border: 1px solid rgba(34, 197, 94, .22);
+      color: var(--green2);
+      font-size: .67rem;
+      font-weight: 700;
+      padding: .25rem .7rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: .08em
+    }
+
+    .panel-body {
+      padding: 1.3rem 1.4rem
+    }
+
+    .zone-hd {
+      font-size: .67rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: .6rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: .5rem
+    }
+
+    .zone-hd::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border)
+    }
+
+    .slots-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 5px;
+      margin-bottom: 1.2rem
+    }
+
+    .slot {
+      border-radius: 7px;
+      padding: .52rem .1rem;
+      text-align: center;
+      font-size: .6rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .2s cubic-bezier(.22, 1, .36, 1);
+      border: 1px solid transparent;
+      line-height: 1.15;
+      position: relative;
+      overflow: hidden;
+      user-select: none
+    }
+
+    .slot::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, .15);
+      opacity: 0;
+      transition: opacity .2s
+    }
+
+    .slot:hover:not(.oc)::before {
+      opacity: 1
+    }
+
+    .slot:hover:not(.oc) {
+      transform: scale(1.15);
+      z-index: 5
+    }
+
+    .slot:active:not(.oc) {
+      transform: scale(.95)
+    }
+
+    .slot.av {
+      background: var(--green-bg);
+      border-color: rgba(34, 197, 94, .25);
+      color: var(--green2)
+    }
+
+    .slot.oc {
+      background: var(--red-bg);
+      border-color: rgba(239, 68, 68, .22);
+      color: var(--red2);
+      cursor: not-allowed
+    }
+
+    .slot.sl {
+      background: var(--gold-bg);
+      border-color: var(--gold);
+      color: var(--gold);
+      animation: borderFlow 2s infinite
+    }
+
+    .slot.bl {
+      background: var(--bg4);
+      border-color: var(--border2);
+      color: var(--text3);
+      cursor: not-allowed
+    }
+
+    .slot-sub {
+      font-size: .53rem;
+      opacity: .65;
+      font-weight: 400;
+      margin-top: 1px
+    }
+
+    .slot-counts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-top: 1rem
+    }
+
+    .scount {
+      background: var(--bg3);
+      border-radius: 9px;
+      padding: .75rem;
+      text-align: center;
+      transition: background .3s
+    }
+
+    .scount .sn {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      animation: countUp .5s ease
+    }
+
+    .scount .sl2 {
+      font-size: .63rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-top: 2px
+    }
+
+    .scount.g .sn {
+      color: var(--green2)
+    }
+
+    .scount.r .sn {
+      color: var(--red2)
+    }
+
+    .scount.y .sn {
+      color: var(--gold)
+    }
+
+    .scount.b .sn {
+      color: var(--text2)
+    }
+
+    .sel-bar {
+      display: none;
+      margin-top: 1rem;
+      background: var(--gold-bg);
+      border: 1px solid var(--gold-border);
+      border-radius: 10px;
+      padding: .9rem 1.1rem;
+      align-items: center;
+      justify-content: space-between;
+      animation: scaleIn .3s ease;
+      gap: .5rem;
+      flex-wrap: wrap
+    }
+
+    .sel-bar.show {
+      display: flex
+    }
+
+    .slot-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem
+    }
+
+    .side-img-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden
+    }
+
+    .side-img-card img {
+      width: 100%;
+      height: 165px;
+      object-fit: cover;
+      transition: transform .5s
+    }
+
+    .side-img-card:hover img {
+      transform: scale(1.04)
+    }
+
+    .side-card-body {
+      padding: 1rem
+    }
+
+    .side-card-body h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: .92rem;
+      font-weight: 700;
+      margin-bottom: .35rem
+    }
+
+    .side-card-body p {
+      color: var(--text2);
+      font-size: .78rem;
+      line-height: 1.6
+    }
+
+    /* ════ PRICING ════ */
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.3rem
+    }
+
+    .pc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all .3s
+    }
+
+    .pc:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-border);
+      box-shadow: 0 20px 50px var(--gold-bg)
+    }
+
+    .pc-img {
+      height: 155px;
+      overflow: hidden
+    }
+
+    .pc-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(.75);
+      transition: all .4s
+    }
+
+    .pc:hover .pc-img img {
+      filter: brightness(.9);
+      transform: scale(1.04)
+    }
+
+    .pc-body {
+      padding: 1.5rem
+    }
+
+    .pc-rate {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1
+    }
+
+    .pc-per {
+      color: var(--text3);
+      font-size: .78rem;
+      margin-bottom: 1rem
+    }
+
+    .pc-feats {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem
+    }
+
+    .pc-feats li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .81rem;
+      color: var(--text2)
+    }
+
+    .pc-feats li::before {
+      content: '✓';
+      color: var(--green2);
+      font-weight: 800;
+      font-size: .76rem;
+      flex-shrink: 0
+    }
+
+    .calc-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.6rem
+    }
+
+    /* ════ PAYMENT ════ */
+    .pay-methods-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem
+    }
+
+    .pay-app {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .7rem;
+      cursor: pointer;
+      transition: all .25s;
+      text-align: center
+    }
+
+    .pay-app:hover {
+      border-color: var(--gold-border);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px var(--gold-bg)
+    }
+
+    .pay-app:active {
+      transform: scale(.97)
+    }
+
+    .pay-app .pa-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      transition: transform .3s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden
+    }
+
+    .pay-app:hover .pa-icon {
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px var(--gold-bg)
+    }
+
+    .pay-app h5 {
+      font-weight: 700;
+      font-size: .88rem;
+      margin-top: 0.2rem
+    }
+
+    .pay-app p {
+      color: var(--text2);
+      font-size: .73rem
+    }
+
+    .qr-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center
+    }
+
+    .qr-box {
+      width: 160px;
+      height: 160px;
+      margin: 1.5rem auto;
+      background: var(--bg2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--border2);
+      overflow: hidden
+    }
+
+    .qr-svg {
+      width: 100%;
+      height: 100%
+    }
+
+    /* ════ HOW IT WORKS ════ */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.8rem;
+      background: transparent;
+      border: none
+    }
+
+    .step {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.2rem 1.8rem;
+      position: relative;
+      transition: all .6s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
+    }
+
+    .step:hover {
+      border-color: var(--gold-border);
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 20px 45px var(--gold-bg)
+    }
+
+    .step-n {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--gold-bg);
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      opacity: .25;
+      transition: all .6s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none
+    }
+
+    .step:hover .step-n {
+      transform: scale(1.3) translate(-15px, 15px);
+      opacity: .6;
+      color: var(--gold)
+    }
+
+    .step h4 {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: .9rem;
+      position: relative;
+      z-index: 2
+    }
+
+    .step p {
+      color: var(--text2);
+      font-size: .85rem;
+      line-height: 1.75;
+      position: relative;
+      z-index: 2
+    }
+
+    .step::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent, var(--gold-bg));
+      opacity: 0;
+      transition: opacity .5s
+    }
+
+    .step:hover::before {
+      opacity: .5
+    }
+
+    /* ════ REVIEWS ════ */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem
+    }
+
+    .review-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.2rem 2rem;
+      transition: all .4s cubic-bezier(.16, 1, .3, 1);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%
+    }
+
+    .review-card:hover {
+      border-color: var(--gold-border);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 45px var(--gold-bg)
+    }
+
+    .review-card::before {
+      content: '"';
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: var(--gold-bg);
+      line-height: 1;
+      opacity: .4;
+      pointer-events: none
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 2px
+    }
+
+    .review-text {
+      font-size: .95rem;
+      line-height: 1.7;
+      color: var(--text);
+      font-style: italic;
+      margin-bottom: 2rem;
+      flex: 1
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: auto;
+      border-top: 1px solid var(--border);
+      padding-top: 1.2rem
+    }
+
+    .rv-ava {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #fff;
+      font-size: .9rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, .2)
+    }
+
+    .rv-info h5 {
+      font-weight: 700;
+      font-size: .9rem;
+      margin-bottom: 2px
+    }
+
+    .rv-info p {
+      font-size: .75rem;
+      color: var(--text3)
+    }
+
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: .65rem;
+      color: var(--green2);
+      margin-bottom: .5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em
+    }
+
+    /* ════ MAP ════ */
+    .map-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: stretch
+    }
+
+    .map-embed {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 100%;
+      min-height: 450px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15)
+    }
+
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block
+    }
+
+    [data-theme="dark"] .map-embed iframe {
+      filter: invert(90%) hue-rotate(180deg) brightness(.85) contrast(1.1)
+    }
+
+    .map-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      justify-content: center
+    }
+
+    .map-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.4rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      transition: all .4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden
+    }
+
+    .map-card:hover {
+      border-color: var(--gold-border);
+      transform: translateX(10px);
+      box-shadow: 0 10px 30px var(--gold-bg)
+    }
+
+    .map-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--gold);
+      transform: scaleY(0);
+      transition: transform .4s
+    }
+
+    .map-card:hover::before {
+      transform: scaleY(1)
+    }
+
+    .map-ico {
+      width: 46px;
+      height: 46px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
+    }
+
+    /* ════ GALLERY ════ */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 220px 220px;
+      gap: 3px
+    }
+
+    .gi {
+      overflow: hidden;
+      position: relative;
+      cursor: pointer
+    }
+
+    .gi img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s, filter .5s;
+      display: block
+    }
+
+    .gi:hover img {
+      transform: scale(1.07);
+      filter: brightness(1.05)
+    }
+
+    .gi.big {
+      grid-column: span 2;
+      grid-row: span 2
+    }
+
+    .gi-lbl {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: .85rem;
+      background: linear-gradient(transparent, rgba(0, 0, 0, .82));
+      font-size: .77rem;
+      font-weight: 500;
+      color: #ddd;
+      transform: translateY(100%);
+      transition: transform .3s
+    }
+
+    .gi:hover .gi-lbl {
+      transform: translateY(0)
+    }
+
+    /* ════ FOOTER ════ */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 3.5rem 4vw 2rem
+    }
+
+    .foot-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3.5rem;
+      margin-bottom: 2.5rem
+    }
+
+    .foot-brand p {
+      color: var(--text2);
+      font-size: .82rem;
+      line-height: 1.75;
+      max-width: 230px;
+      margin-top: .85rem
+    }
+
+    .foot-col h5 {
+      font-size: .77rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--text3);
+      margin-bottom: .85rem
+    }
+
+    .foot-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem
+    }
+
+    .foot-col ul li a {
+      color: var(--text2);
+      font-size: .82rem;
+      transition: color .2s
+    }
+
+    .foot-col ul li a:hover {
+      color: var(--gold)
+    }
+
+    .foot-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem
+    }
+
+    .foot-bottom p {
+      color: var(--text3);
+      font-size: .77rem
+    }
+
+
+
+    /* ════ OVERLAYS & MODALS ════ */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(0, 0, 0, .85);
+      backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      animation: fadeIn .25s ease
+    }
+
+    .overlay.on {
+      display: flex
+    }
+
+    .modal {
+      background: var(--card);
+      border: 1px solid var(--border2);
+      border-radius: 20px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      animation: scaleIn .3s cubic-bezier(.22, 1, .36, 1)
+    }
+
+    .modal.sm {
+      max-width: 440px
+    }
+
+    .modal.md {
+      max-width: 580px
+    }
+
+    .modal.xl {
+      max-width: 1140px
+    }
+
+    .modal-banner {
+      height: 140px;
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0
+    }
+
+    .modal-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(.55)
+    }
+
+    .modal-banner-txt {
+      position: absolute;
+      bottom: 1rem;
+      left: 1.5rem
+    }
+
+    .modal-banner-txt h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 800
+    }
+
+    .modal-banner-txt p {
+      color: rgba(255, 255, 255, .65);
+      font-size: .8rem
+    }
+
+    .modal-body {
+      padding: 1.7rem
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, .25)
+    }
+
+    /* ════ PROFESSIONAL HISTORY TABLE ════ */
+    .hist-table-container {
+      overflow-x: auto;
+      margin-top: 1.2rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg2);
+    }
+
+    .hist-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    .hist-table th {
+      padding: 1.2rem 1rem;
+      text-align: left;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text3);
+      background: rgba(var(--gold-rgb), 0.05);
+      border-bottom: 2px solid var(--gold);
+      font-weight: 800;
+    }
+
+    .hist-table td {
+      padding: 1.2rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text);
+      vertical-align: middle;
+    }
+
+    .hist-table tr:hover td {
+      background: rgba(var(--gold-rgb), 0.03);
+    }
+
+    .hist-table .col-date {
+      font-weight: 600;
+      min-width: 90px;
+    }
+
+    .hist-table .col-user {
+      font-weight: 500;
+    }
+
+    .hist-table .col-duration {
+      color: var(--text2);
+      font-family: monospace;
+    }
+
+    .hist-table .col-amount {
+      font-weight: 700;
+      color: var(--gold);
+      text-align: right;
+    }
+
+    .hist-table .col-status {
+      text-align: right;
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, .3)
+    }
+
+    .tabs {
+      display: flex;
+      background: var(--bg3);
+      border-radius: 9px;
+      padding: 3px;
+      gap: 3px;
+      margin-bottom: 1.3rem
+    }
+
+    .tab {
+      flex: 1;
+      padding: .48rem;
+      border-radius: 7px;
+      border: none;
+      background: transparent;
+      color: var(--text2);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: .83rem;
+      cursor: pointer;
+      transition: all .25s
+    }
+
+    .tab.on {
+      background: var(--card);
+      color: var(--text);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .25)
+    }
+
+    .fg {
+      margin-bottom: .85rem
+    }
+
+    .fg label {
+      display: block;
+      font-size: .73rem;
+      color: var(--text2);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: .35rem;
+      font-weight: 600
+    }
+
+    .fg input,
+    .fg select,
+    .fg textarea {
+      width: 100%;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 7px;
+      padding: .65rem .9rem;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: .87rem;
+      outline: none;
+      transition: border-color .2s, background .4s
+    }
+
+    .fg input:focus,
+    .fg select:focus,
+    .fg textarea:focus {
+      border-color: var(--gold);
+      background: var(--bg2)
+    }
+
+    .fg select option {
+      background: var(--bg2);
+      color: var(--text)
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .85rem
+    }
+
+    .modal-foot {
+      display: flex;
+      gap: .65rem;
+      margin-top: 1.1rem
+    }
+
+    .btn-cancel {
+      flex: 1;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      color: var(--text2);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      border-radius: 7px;
+      padding: .7rem;
+      cursor: pointer;
+      transition: all .2s
+    }
+
+    .btn-cancel:hover {
+      border-color: var(--gold);
+      color: var(--gold)
+    }
+
+    .btn-submit {
+      flex: 2;
+      background: var(--gold);
+      color: #000;
+      border: none;
+      border-radius: 7px;
+      padding: .7rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      cursor: pointer;
+      transition: all .2s
+    }
+
+    .btn-submit:hover {
+      background: var(--gold2)
+    }
+
+    /* ════ USER DASHBOARD ════ */
+    .udash {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden
+    }
+
+    .udash-hd {
+      background: var(--card);
+      padding: 1.2rem 1.4rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .udash-hd h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700
+    }
+
+    .udash-body {
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem
+    }
+
+    .ud-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .85rem
+    }
+
+    .ud-stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .ud-stat.sm {
+      padding: 0.6rem 0.8rem;
+    }
+
+    .ud-stat.sm .us-lbl {
+      font-size: 0.6rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .ud-stat.sm .us-val {
+      font-size: 1.15rem;
+    }
+
+    .ud-stat .us-lbl {
+      font-size: .67rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      margin-bottom: .35rem;
+      font-weight: 600
+    }
+
+    .ud-stat .us-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 800
+    }
+
+    .ud-stat .us-sub {
+      font-size: .68rem;
+      color: var(--text2);
+      margin-top: 2px
+    }
+
+    .us-val.gold {
+      color: var(--gold)
+    }
+
+    .us-val.green {
+      color: var(--green2)
+    }
+
+    .ud-actions {
+      display: flex;
+      gap: .7rem
+    }
+
+    .ud-hist {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      overflow: hidden
+    }
+
+    .ud-hist-hd {
+      padding: .85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-weight: 700;
+      font-size: .83rem
+    }
+
+    .ud-hist-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .8rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: .8rem;
+      transition: background .2s
+    }
+
+    .ud-hist-row:hover {
+      background: var(--bg3)
+    }
+
+    .ud-hist-row:last-child {
+      border-bottom: none
+    }
+
+    /* ════ ADMIN DASHBOARD ════ */
+    .admin-modal-inner {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      height: 580px;
+      overflow: hidden
+    }
+
+    .admin-side {
+      background: var(--bg);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column
+    }
+
+    .admin-side-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: .9rem 1.2rem 1rem;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .admin-side-logo em {
+      font-style: normal;
+      color: var(--gold)
+    }
+
+    .anav {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: .5rem 0;
+      flex: 1
+    }
+
+    .anav-item {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      padding: .65rem 1.2rem;
+      font-size: .82rem;
+      font-weight: 500;
+      color: var(--text2);
+      cursor: pointer;
+      transition: all .2s;
+      border: none;
+      background: transparent;
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      text-align: left;
+      border-left: 2px solid transparent
+    }
+
+    .anav-item:hover {
+      background: var(--bg2);
+      color: var(--text)
+    }
+
+    .anav-item.active {
+      background: var(--gold-bg);
+      color: var(--gold);
+      border-left-color: var(--gold)
+    }
+
+    .anav-item .ai {
+      width: 18px;
+      text-align: center;
+      font-size: .95rem
+    }
+
+    .admin-main {
+      background: var(--bg2);
+      overflow-y: auto
+    }
+
+    .admin-page {
+      display: none;
+      padding: 1.5rem;
+      animation: fadeIn .3s ease
+    }
+
+    .admin-page.on {
+      display: block
+    }
+
+    .admin-hd {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.3rem
+    }
+
+    .admin-hd h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 800
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: .85rem;
+      margin-bottom: 1.3rem
+    }
+
+    .stat-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 1.1rem;
+      transition: all .25s
+    }
+
+    .stat-box:hover {
+      border-color: var(--gold-border)
+    }
+
+    .stat-box .sv {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--gold)
+    }
+
+    .stat-box .sl {
+      font-size: .72rem;
+      color: var(--text2);
+      margin-top: 2px
+    }
+
+    .stat-box .sd {
+      font-size: .73rem;
+      color: var(--green2);
+      margin-top: 5px
+    }
+
+    .atbl {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .79rem
+    }
+
+    .atbl th {
+      text-align: left;
+      padding: .65rem .9rem;
+      background: var(--bg3);
+      color: var(--text2);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: .66rem;
+      letter-spacing: .08em;
+      position: sticky;
+      top: 0
+    }
+
+    .atbl td {
+      padding: .72rem .9rem;
+      border-bottom: 1px solid var(--border);
+      transition: background .2s
+    }
+
+    .atbl tr:hover td {
+      background: var(--bg3)
+    }
+
+    .rev-bar-wrap {
+      flex: 1;
+      background: var(--bg4);
+      border-radius: 4px;
+      height: 18px;
+      overflow: hidden
+    }
+
+    .rev-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      border-radius: 4px;
+      transition: width 1s cubic-bezier(.22, 1, .36, 1)
+    }
+
+    .admin-slot-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 6px
+    }
+
+    .as {
+      border-radius: 7px;
+      padding: .6rem .2rem;
+      text-align: center;
+      font-size: .63rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .2s;
+      border: 1px solid transparent
+    }
+
+    .as:hover {
+      transform: scale(1.1)
+    }
+
+    .as.av {
+      background: var(--green-bg);
+      border-color: rgba(34, 197, 94, .25);
+      color: var(--green2)
+    }
+
+    .as.oc {
+      background: var(--red-bg);
+      border-color: rgba(239, 68, 68, .22);
+      color: var(--red2)
+    }
+
+    .as.bl {
+      background: var(--bg4);
+      border-color: var(--border2);
+      color: var(--text3)
+    }
+
+    .toggle-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .75rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .83rem
+    }
+
+    .toggle {
+      width: 38px;
+      height: 22px;
+      border-radius: 11px;
+      background: var(--bg4);
+      border: 1px solid var(--border2);
+      cursor: pointer;
+      position: relative;
+      transition: all .3s
+    }
+
+    .toggle.on {
+      background: var(--green)
+    }
+
+    .toggle::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #fff;
+      top: 2px;
+      left: 2px;
+      transition: transform .3s;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .3)
+    }
+
+    .toggle.on::after {
+      transform: translateX(16px)
+    }
+
+    /* ════ FORM ELEMENTS ════ */
+    input[type=range] {
+      accent-color: var(--gold);
+      cursor: pointer;
+      height: 4px
+    }
+
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .75rem center;
+      padding-right: 2rem !important
+    }
+
+    /* ════ LOADER ════ */
+    .loading {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255, 255, 255, .3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin .6s linear infinite;
+      vertical-align: middle
+    }
+
+    /* ════ TOAST ════ */
+    #toast {
+      position: fixed;
+      bottom: 5rem;
+      right: 1.5rem;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem
+    }
+
+    .toast-item {
+      background: var(--card);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: .85rem 1.2rem;
+      font-size: .83rem;
+      font-weight: 500;
+      box-shadow: var(--shadow);
+      animation: fadeUp .35s ease;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      max-width: 280px
+    }
+
+    .toast-item.success {
+      border-color: rgba(34, 197, 94, .35)
+    }
+
+    .toast-item.error {
+      border-color: rgba(239, 68, 68, .35)
+    }
+
+    .toast-item.info {
+      border-color: var(--gold-border)
+    }
+
+
+
+    .activity-item {
+      display: flex;
+      gap: .8rem;
+      padding: .7rem;
+      border-bottom: 1px solid var(--border);
+      font-size: .78rem
+    }
+
+    .activity-time {
+      color: var(--text3);
+      font-family: monospace;
+      white-space: nowrap
+    }
+
+    .activity-action {
+      font-weight: 700;
+      color: var(--gold)
+    }
+
+    /* ════ RESPONSIVE ════ */
+    @media(max-width:900px) {
+      .nav-links {
+        display: none
+      }
+
+      .slot-wrap {
+        grid-template-columns: 1fr
+      }
+
+      .slot-sidebar {
+        display: none
+      }
+
+      .price-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .map-grid,
+      .foot-grid {
+        grid-template-columns: 1fr
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .admin-modal-inner {
+        grid-template-columns: 1fr;
+        height: auto
+      }
+
+      .slots-grid {
+        grid-template-columns: repeat(5, 1fr)
+      }
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+
+
+
+  <!-- TOAST CONTAINER -->
+  <div id="toast"></div>
+
+  <!-- ══ NAV ══════════════════════════════════════════════════════════ -->
+  <nav>
+    <div class="nav-logo" onclick="scrollTo('home')">Garuda Mall<em>Parking</em></div>
+    <ul class="nav-links">
+      <li><a href="#slots" onclick="smoothScroll(event,'slots')">Live Slots</a></li>
+      <li><a href="#pricing" onclick="smoothScroll(event,'pricing')">Pricing</a></li>
+      <li><a href="#location" onclick="smoothScroll(event,'location')">Location</a></li>
+      <li><a href="#gallery" onclick="smoothScroll(event,'gallery')">Gallery</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+        <span class="theme-icon moon-icon">🌙</span>
+        <span class="theme-icon sun-icon">☀️</span>
+      </div>
+      <div id="navButtons" style="display:flex; gap:0.6rem; align-items:center;">
+        <!-- Dynamic buttons go here -->
+      </div>
+      <button class="btn btn-gold btn-sm" id="topBookBtn"
+        style="display:none; margin-left:0.8rem; font-weight:700; box-shadow:0 4px 12px var(--gold-bg)"
+        onclick="openReserveModal()">
+        Book <span id="topBookCode"
+          style="margin-left:4px; background:rgba(0,0,0,0.15); padding:2px 6px; border-radius:4px">--</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══════════════════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <img class="hero-bg" src="images/f83979ebc93090c5d200918ee8c027c1659c61dd-1280x719.jpg" alt="Parking complex">
+    <div class="hero-ov"></div>
+    <div class="hero-body">
+      <div class="hero-badge">
+        <div class="dot"></div>System Live — Nagarathpet, Bangalore
+      </div>
+      <h1>Smart Parking for<br><em>Garuda Mall</em></h1>
+      <p class="hero-p">50 digitally managed slots, live availability, UPI/QR payments, and real-time cost tracking —
+        all from your phone. No queues, no paperwork.</p>
+      <div class="hero-btns">
+        <button class="btn btn-gold btn-lg" id="heroReserveBtn" onclick="openReserveModal()">Reserve Your Slot
+          →</button>
+        <button class="btn btn-outline btn-lg" onclick="smoothScroll(event,'location')">View Live Map</button>
+      </div>
+    </div>
+    <div class="hero-ribbon">
+      <div class="hstat">
+        <div class="hn">50</div>
+        <div class="hl">Total Slots</div>
+      </div>
+      <div class="hstat">
+        <div class="hn" id="hero-rate-2w">₹10</div>
+        <div class="hl">2-Wheeler/hr</div>
+      </div>
+      <div class="hstat">
+        <div class="hn" id="hero-rate-4w">₹30</div>
+        <div class="hl">4-Wheeler/hr</div>
+      </div>
+      <div class="hstat">
+        <div class="hn">24/7</div>
+        <div class="hl">Open</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ LIVE SLOTS ════════════════════════════════════════════════════ -->
+  <section class="sec" id="slots">
+    <div class="sec-center reveal" style="margin-bottom:2.5rem">
+      <div class="eyebrow">Real-time Availability</div>
+      <h2 class="sec-title">Live Parking Map — 50 Slots</h2>
+      <p class="sec-lead">Updates every 5 seconds. Tap any green slot to select it. Zones A & B for 2-wheelers, Zones C,
+        D & E for 4-wheelers.</p>
+    </div>
+    <div class="slot-wrap reveal">
+      <div>
+        <div class="slot-panel">
+          <div class="panel-hd">
+            <h3>🅿️ Garuda Mall — Ground Floor</h3>
+            <div class="live-pill">
+              <div class="dot"></div>LIVE
+            </div>
+          </div>
+          <div class="panel-body">
+            <!-- TOP BOOK BUTTON -->
+            <button id="topBookBtn" class="btn btn-gold btn-lg"
+              style="display:none; width:100%; margin-bottom:1.5rem; justify-content:center; font-size:1.1rem; box-shadow:0 10px 20px rgba(212,175,55,0.3); position:relative; z-index:100; opacity:1 !important"
+              onclick="openReserveModal()">
+              Book Selected Slot <span id="topBookCode"
+                style="margin-left:8px; background:rgba(0,0,0,0.2); padding:2px 8px; border-radius:4px"></span> →
+            </button>
+            <div class="zone-hd" id="zone-rate-a">Zone A — Two Wheelers · ₹10/hr</div>
+            <div class="slots-grid" id="zA"></div>
+            <div class="zone-hd" id="zone-rate-b">Zone B — Two Wheelers · ₹10/hr</div>
+            <div class="slots-grid" id="zB"></div>
+            <div class="zone-hd" id="zone-rate-c">Zone C — Four Wheelers · ₹30/hr</div>
+            <div class="slots-grid" id="zC"></div>
+            <div class="zone-hd" id="zone-rate-d">Zone D — Four Wheelers · ₹30/hr</div>
+            <div class="slots-grid" id="zD"></div>
+            <div class="zone-hd" id="zone-rate-e">Zone E — Four Wheelers · ₹30/hr</div>
+            <div class="slots-grid" id="zE"></div>
+            <div class="slot-counts">
+              <div class="scount g">
+                <div class="sn" id="avN">—</div>
+                <div class="sl2">Available</div>
+              </div>
+              <div class="scount r">
+                <div class="sn" id="ocN">—</div>
+                <div class="sl2">Occupied</div>
+              </div>
+              <div class="scount b">
+                <div class="sn" id="blN">—</div>
+                <div class="sl2">Blocked</div>
+              </div>
+              <div class="scount y">
+                <div class="sn">50</div>
+                <div class="sl2">Total</div>
+              </div>
+            </div>
+            <div class="sel-bar" id="selBar">
+              <div><strong id="selCode" style="color:var(--gold);font-size:1.1rem">—</strong> <span
+                  style="color:var(--text2);font-size:.82rem" id="selInfo">selected</span></div>
+              <button class="btn btn-gold btn-sm" onclick="openReserveModal()">Book This Slot →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slot-sidebar">
+        <div class="side-img-card reveal-right">
+          <img src="images/splendor 2.avif" alt="Two Wheeler Zone (Hero Splendor)">
+          <div class="side-card-body">
+            <h4>Zones A & B — Two Wheelers</h4>
+            <p>20 slots for motorcycles & scooters. Covered bays, secure entry.</p>
+          </div>
+        </div>
+        <div class="side-img-card reveal-right" style="transition-delay:.1s">
+          <img src="images/Omni1ITG-1741685074195.avif" alt="Four Wheeler Zone">
+          <div class="side-card-body">
+            <h4>Zones C, D & E — Four Wheelers</h4>
+            <p>30 bays for cars & SUVs. CCTV monitored, GPS tagged.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PRICING ═══════════════════════════════════════════════════════ -->
+  <section class="sec sec-alt" id="pricing">
+    <div class="sec-center reveal" style="margin-bottom:2.5rem">
+      <div class="eyebrow">Transparent Pricing</div>
+      <h2 class="sec-title">Simple, fair rates</h2>
+      <p class="sec-lead">Billed by the minute, rounded up. No hidden charges. Pay only for what you use.</p>
+    </div>
+    <div class="price-grid">
+      <div class="pc reveal" style="transition-delay:0s">
+        <div class="pc-img"><img src="images/redbike2.avif" alt="High-End Red Two Wheeler"></div>
+        <div class="pc-body">
+          <div style="font-weight:700;font-size:.92rem;margin-bottom:.3rem">🛵 Two-Wheeler</div>
+          <div class="pc-rate" id="card-rate-2w">₹10</div>
+          <div class="pc-per">per hour · Zones A & B (20 slots)</div>
+          <ul class="pc-feats">
+            <li>Scooters & motorcycles</li>
+            <li>Slots A1–A10, B1–B10</li>
+            <li>Covered, secure bays</li>
+            <li>Minute-accurate billing</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pc card-gold reveal" style="transition-delay:.1s">
+        <div class="pc-img"><img src="images/redcar.jpg" alt="Premium Red Four Wheeler"></div>
+        <div class="pc-body">
+          <div style="margin-bottom:.5rem"><span class="badge badge-gold">Most Popular</span></div>
+          <div style="font-weight:700;font-size:.92rem;margin-bottom:.3rem">🚗 Four-Wheeler</div>
+          <div class="pc-rate" id="rate-4w-card">₹30</div>
+          <div class="pc-per">per hour · Zones C, D & E (30 slots)</div>
+          <ul class="pc-feats">
+            <li>Cars, SUVs & vans</li>
+            <li>Slots C1–C10, D1–D10, E1–E10</li>
+            <li>CCTV monitored bays</li>
+            <li>GPS slot tracking</li>
+            <li>Secure entry & exit</li>
+          </ul>
+        </div>
+      </div>
+      <div class="calc-card reveal" style="transition-delay:.2s">
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:1.3rem">💡 Cost
+          Estimator</div>
+        <div class="fg"><label>Vehicle type</label>
+          <select id="ctype" onchange="recalc()">
+            <option id="est-4w" value="30">Four-Wheeler — ₹30/hr</option>
+            <option id="est-2w" value="10">Two-Wheeler — ₹10/hr</option>
+          </select>
+        </div>
+        <div class="fg"><label>Expected duration: <strong id="hlbl" style="color:var(--gold)">3 hrs</strong></label>
+          <input type="range" min="1" max="12" value="3" step="1" id="chours" oninput="recalc()"
+            style="width:100%;margin-top:.5rem">
+          <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--text3);margin-top:.3rem">
+            <span>1 hr</span><span>12 hrs</span>
+          </div>
+        </div>
+        <div
+          style="background:var(--gold-bg);border:1px solid var(--gold-border);border-radius:11px;padding:1.1rem;text-align:center;margin-top:.5rem">
+          <div style="font-size:.72rem;color:var(--text2);text-transform:uppercase;letter-spacing:.08em">Estimated Total
+          </div>
+          <div style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:var(--gold)"
+            id="camt">₹0</div>
+          <div style="font-size:.72rem;color:var(--text3);margin-top:3px">No hidden charges</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ HOW IT WORKS ══════════════════════════════════════════════════ -->
+  <section class="sec sec-alt" id="how-it-works">
+    <div class="sec-center reveal" style="margin-bottom:2.5rem">
+      <div class="eyebrow">User Journey</div>
+      <h2 class="sec-title">Park in 7 simple steps</h2>
+    </div>
+    <div class="steps-grid reveal">
+      <div class="step reveal" style="transition-delay:0s">
+        <div class="step-n">01</div>
+        <h4>Enter Complex</h4>
+        <p>Drive into Garuda Mall via the Nagarathpet main gate.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.1s">
+        <div class="step-n">02</div>
+        <h4>Login / Register</h4>
+        <p>Secure phone and password login in under 60 seconds.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.2s">
+        <div class="step-n">03</div>
+        <h4>Select Your Slot</h4>
+        <p>View the live 50-slot map, tap any green bay.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.3s">
+        <div class="step-n">04</div>
+        <h4>Timer Starts</h4>
+        <p>Billing begins automatically on confirmation.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.4s">
+        <div class="step-n">05</div>
+        <h4>Live Cost Updates</h4>
+        <p>Dashboard shows cost growing every minute.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.5s">
+        <div class="step-n">06</div>
+        <h4>Pay Online or QR</h4>
+        <p>UPI, card, net banking, or scan the QR code.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.6s">
+        <div class="step-n">07</div>
+        <h4>Receipt & Exit</h4>
+        <p>Instant SMS receipt. Slot auto-released.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PAYMENT ═══════════════════════════════════════════════════════ -->
+  <!-- ══ LOCATION ══════════════════════════════════════════════════════ -->
+  <section class="sec" id="location">
+    <div class="sec-center reveal" style="margin-bottom:3rem">
+      <div class="eyebrow">Find Our Parking Center</div>
+      <h2 class="sec-title">Nagarathpet, Bangalore</h2>
+      <p class="sec-lead">Located at the heart of old Bangalore — strategically positioned near KR Market, City Market,
+        and Bangalore City Railway Station for your convenience.</p>
+    </div>
+    <div class="map-grid">
+      <div class="map-embed reveal-left">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0245648589717!2d77.61013289999999!3d12.9701592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae167814361c47%3A0x6a12b4f62176d636!2sGaruda+Mall!5e0!3m2!1sen!2sin!4v1715185445213!5m2!1sen!2sin"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Garuda Mall Bangalore"></iframe>
+      </div>
+      <div class="map-info">
+        <div class="map-card reveal-right" style="transition-delay:0s">
+          <div class="map-ico" style="background:var(--gold-bg)">📍</div>
+          <div>
+            <h5 style="font-weight:700;font-size:.92rem;margin-bottom:.4rem;font-family:'Playfair Display',serif">
+              Primary Address</h5>
+            <p style="color:var(--text2);font-size:.85rem;line-height:1.7">Garuda Mall,<br>Magrath Road, Ashok Nagar, Bengaluru — 560025,<br>Karnataka, India</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:.8rem" class="reveal-right"
+          style="transition-delay:.3s">
+          <a class="btn btn-gold btn-sm" href="https://maps.app.goo.gl/YDoV2JL81g5rrsyC8"
+            target="_blank" style="padding:.9rem 1.4rem">🗺️ Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ GALLERY ════════════════════════════════════════════════════════ -->
+  <div class="gallery reveal" id="gallery">
+    <div class="gi big"><img src="images/smart2.jpg" alt="Garuda Mall Digital Hub">
+      <div class="gi-lbl">Garuda Mall Digital Hub — Premium Management</div>
+    </div>
+    <div class="gi"><img src="images/Omni3.jpg" alt="Maruti Suzuki Omni">
+      <div class="gi-lbl">Zone C, D, E — Omni Dedicated Bays</div>
+    </div>
+    <div class="gi"><img src="images/c.avif" alt="Bikes">
+      <div class="gi-lbl">Zone A, B — Two Wheeler Sections</div>
+    </div>
+    <div class="gi"><img src="images/smart digital management.webp" alt="Management">
+      <div class="gi-lbl">Premium Digital Management System</div>
+    </div>
+    <div class="gi"><img src="images/digital payment.webp" alt="Payment">
+      <div class="gi-lbl">Safe & Instant Digital Payments</div>
+    </div>
+  </div>
+
+  <!-- ══ REVIEWS ════════════════════════════════════════════════════════ -->
+  <section class="sec sec-alt">
+    <div class="sec-center reveal" style="margin-bottom:2.5rem">
+      <div class="eyebrow">Visitor Reviews</div>
+      <h2 class="sec-title">What people say</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal" style="transition-delay:0s">
+        <div class="verified-badge">✓ Verified Customer</div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Scanned the QR at the exit, Google Pay opened with the exact amount pre-filled. Paid in
+          5 seconds. This is what digital India looks like."</p>
+        <div class="reviewer">
+          <div class="rv-ava" style="background:#f59e0b">RK</div>
+          <div class="rv-info">
+            <h5>Ravi Kumar</h5>
+            <p>KA-05-MN-8832 · 2 days ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal" style="transition-delay:.1s">
+        <div class="verified-badge">✓ Verified Customer</div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"The live slot map is incredible. I could see from the gate which bays were free. No more
+          circling around looking for parking."</p>
+        <div class="reviewer">
+          <div class="rv-ava" style="background:#10b981">SL</div>
+          <div class="rv-info">
+            <h5>Sunitha L.</h5>
+            <p>KA-02-PQ-4451 · Yesterday</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal" style="transition-delay:.2s">
+        <div class="verified-badge">✓ Verified Customer</div>
+        <div class="stars">★★★★☆</div>
+        <p class="review-text">"Night mode on the website is a thoughtful touch. Used it at 11 PM when visiting a friend
+          at the mall. Very smooth experience."</p>
+        <div class="reviewer">
+          <div class="rv-ava" style="background:#8b5cf6">AM</div>
+          <div class="rv-info">
+            <h5>Arun M.</h5>
+            <p>KA-01-AB-2209 · 1 week ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="nav-logo">Garuda Mall<em>Parking</em></div>
+        <p>Smart digital parking for Garuda Mall, Nagarathpet, Bangalore. Open 24/7 for all outside
+          visitors.</p>
+        <div style="margin-top:1rem;display:flex;gap:.6rem">
+          <button class="btn btn-ghost btn-xs" onclick="toggleTheme()">🌙 Dark / ☀️ Light</button>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>System</h5>
+        <ul>
+          <li><a href="#slots">Live Slot Map</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">Support Center</a></li>
+          <li><a href="#">Payment Issues</a></li>
+          <li><a href="#" onclick="show('adminLoginModal')">Admin Login</a></li>
+          <li><a href="#">Report Problem</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a>📍 Nagarathpet, Bengaluru</a></li>
+          <li><a>📞 +91 70195 95194</a></li>
+          <li><a>✉️ parking@garudamallparking.com</a></li>
+          <li><a>🕐 Open 24/7</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2025 Garuda Mall Parking. All rights reserved.</p>
+      <p>Nagarathpet, Bengaluru — Karnataka, India</p>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+     MODAL: BOOK / LOGIN
+════════════════════════════════════════════════════════════════════ -->
+  <div class="overlay" id="bookModal" onclick="if(event.target===this)hide('bookModal')">
+    <div class="modal sm">
+      <div class="modal-banner"><img src="images/f83979ebc93090c5d200918ee8c027c1659c61dd-1280x719.jpg" alt=""><button
+          class="modal-close" onclick="hide('bookModal')">×</button>
+        <div class="modal-banner-txt">
+          <h3>Garuda Mall Parking</h3>
+          <p>Nagarathpet, Bangalore</p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="tabs" id="authTabs">
+          <button class="tab on" id="t-login" onclick="swTab('login')">Login</button>
+          <button class="tab" id="t-reg" onclick="swTab('register')">Register</button>
+
+        </div>
+
+        <!-- LOGIN/REGISTER FORMS -->
+
+        <div id="f-login">
+          <div class="fg"><label>Phone Number</label><input type="tel" placeholder="10-digit mobile number"
+              id="loginPhone"></div>
+          <div class="fg"><label>Password</label><input type="password" placeholder="Enter password" id="loginPass">
+          </div>
+          <div class="fg" id="durationSection"><label>Expected Duration</label>
+            <select id="expectedDuration">
+              <option value="1">1 Hour</option>
+              <option value="2">2 Hours</option>
+              <option value="3" selected>3 Hours (Recommended)</option>
+              <option value="5">5 Hours</option>
+              <option value="12">12 Hours</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div id="f-reg" style="display:none">
+          <div class="form-row">
+            <div class="fg"><label>Full Name</label><input type="text" placeholder="Your full name"></div>
+            <div class="fg"><label>Phone</label><input type="tel" placeholder="10-digit number"></div>
+          </div>
+          <div class="form-row">
+            <div class="fg"><label>Vehicle Number</label><input type="text" placeholder="KA-01-AB-1234"></div>
+            <div class="fg"><label>Vehicle Type</label><select>
+                <option>Two-Wheeler (₹10/hr)</option>
+                <option>Four-Wheeler (₹30/hr)</option>
+              </select></div>
+          </div>
+          <div class="form-row">
+            <div class="fg"><label>Email (optional)</label><input type="email" placeholder="email@example.com"></div>
+            <div class="fg"><label>Password</label><input type="password" placeholder="Create password"></div>
+          </div>
+        </div>
+        <div class="modal-foot"><button class="btn-cancel" onclick="hide('bookModal')">Cancel</button><button
+            class="btn-submit" id="mainSubmitBtn" onclick="handleBookOrReg()">Continue →</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+     MODAL: USER DASHBOARD
+════════════════════════════════════════════════════════════════════ -->
+  <div class="overlay" id="userDashModal" onclick="if(event.target===this)hide('userDashModal')">
+    <div class="modal md">
+      <div class="modal-banner"><img src="images/omnidash.jpg" alt=""><button class="modal-close"
+          onclick="hide('userDashModal')">×</button>
+        <div class="modal-banner-txt" style="transition: all 0.4s ease-in-out;">
+          <h3 id="dashUserName" style="margin-bottom:2px">Guest Dashboard</h3>
+          <p id="dashUserContact" style="font-size:0.8rem; margin-bottom:5px; color:rgba(255,255,255,0.7)">Please Login
+            First</p>
+          <p id="dashUserVehicle" style="font-size:0.75rem; color:var(--gold); font-weight:700; margin:0">No Vehicle
+            Registered</p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="udash">
+          <div class="udash-hd">
+            <h3>Active Session</h3>
+            <span class="badge badge-gold" id="ud-status" style="transition: all 0.3s ease">● Parking Active</span>
+          </div>
+          <div class="udash-body" style="transition: opacity 0.3s ease">
+            <div class="ud-row">
+              <div class="ud-stat"
+                style="transition: transform 0.3s ease, border-color 0.3s ease; border-color: var(--gold)"
+                onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div class="us-lbl">Slot Number</div>
+                <div class="us-val gold" id="ud-slot" style="font-size: 1.8rem">--</div>
+                <div class="us-sub" id="ud-slot-type">--</div>
+              </div>
+              <div class="ud-stat sm" style="transition: transform 0.3s ease, border-color 0.3s ease"
+                onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='var(--gold)'"
+                onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)'">
+                <div class="us-lbl">Duration</div>
+                <div class="us-val green" id="ud-timer">0h 0m 0s</div>
+                <div class="us-sub" id="ud-timer-lbl">Live details</div>
+              </div>
+              <div class="ud-stat" style="transition: transform 0.3s ease, border-color 0.3s ease"
+                onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='var(--gold)'"
+                onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)'">
+                <div class="us-lbl">Cost So Far</div>
+                <div class="us-val gold" id="ud-cost">₹0</div>
+                <div class="us-sub" style="color:var(--green2)">● Live</div>
+              </div>
+
+            </div>
+            <div class="ud-hist-hd"
+              style="margin:1rem 0 .5rem; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text3)">
+              Lifetime Activity</div>
+            <div class="ud-row" style="margin-bottom:1rem">
+              <div class="ud-stat sm" style="flex:1">
+                <div class="us-lbl">Total Sessions</div>
+                <div class="us-val" id="ud-total-sessions" style="font-size:1.2rem">0</div>
+                <div class="us-sub">Trips completed</div>
+              </div>
+            </div>
+
+            <div class="ud-stat"
+              style="background:var(--green-bg);border-color:rgba(34,197,94,.2); transition: all 0.3s ease">
+              <div class="us-lbl">Location</div>
+              <div id="ud-loc" style="font-size:.88rem;font-weight:600;margin-top:4px">📍 Locate on Map</div>
+            </div>
+            <div class="ud-actions">
+              <button class="btn btn-gold" style="width:100%; justify-content:center" id="dashPayBtn"
+                onclick="toggleDashPay()">💳 Pay & Exit Session →</button>
+            </div>
+
+            <!-- INTEGRATED PAYMENT GATEWAY -->
+            <div id="dashPaymentSection"
+              style="display:none;margin-top:1.5rem;padding-top:1.5rem;border-top:1px dashed var(--border);animation:fadeIn .4s ease">
+              <div style="text-align:center;margin-bottom:1.2rem">
+                <div class="eyebrow" style="text-align:center">Instant Checkout</div>
+                <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold)">Pay <span
+                    id="dash-amt-display">₹75</span></h3>
+                <p style="font-size:.82rem;color:var(--text2);margin-top:.4rem">Securely powered by Razorpay</p>
+              </div>
+
+              <div
+                style="background:var(--bg3);border-radius:16px;padding:1.5rem;text-align:center;border:1px solid var(--border)">
+                <div style="font-size:2.5rem;margin-bottom:1rem">🛡️</div>
+                <p style="font-size:.85rem;color:var(--text);margin-bottom:1.5rem;line-height:1.5">Launch our official
+                  payment gateway to pay via <strong>UPI, Google Pay, Cards, or Netbanking</strong>.</p>
+                <button class="btn btn-gold" style="width:100%;justify-content:center;font-size:0.9rem;padding:0.8rem"
+                  onclick="simulatePay('razorpay')">Pay with Razorpay Checkout →</button>
+                <p style="font-size:.7rem;color:var(--text3);margin-top:1rem">100% Secure SSL Encrypted Transaction</p>
+              </div>
+            </div>
+
+            <div class="ud-hist" id="dashboardHistorySection" style="display:none">
+              <div class="ud-hist-hd">Recent Sessions</div>
+              <div id="dashboardHistoryList"></div>
+            </div>
+            <div style="display:flex;gap:.7rem;margin-top:.5rem;flex-wrap:wrap">
+              <button class="btn btn-ghost btn-sm" onclick="downloadHistory()">📄 Download History</button>
+              <button class="btn btn-ghost btn-sm" onclick="handleProfileSettings()">Profile Settings</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- MODAL: PAYMENT SUCCESS -->
+  <div class="overlay" id="paymentSuccessModal" onclick="if(event.target===this)hide('paymentSuccessModal')">
+    <div class="modal sm"
+      style="animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); background: var(--bg2); padding: 0; overflow: hidden; border-color: var(--border);">
+      <div style="background: var(--green-bg); height: 110px; position: relative;"></div>
+      <div class="modal-body" style="text-align:center; padding: 0 2.2rem 2.5rem; margin-top: -46px;">
+        <style>
+          .succ-icon {
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 1.2rem;
+            background: var(--bg2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+            animation: fadeUp 0.5s ease;
+            border: 6px solid var(--bg2);
+          }
+
+          .succ-svg {
+            width: 44px;
+            height: 44px;
+            display: block;
+          }
+
+          .succ-circle {
+            stroke: var(--green2);
+            stroke-width: 3.5;
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            animation: strokeAnim 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+            fill: none;
+          }
+
+          .succ-check {
+            stroke: var(--green2);
+            stroke-width: 4;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: strokeAnim 0.4s cubic-bezier(0.65, 0, 0.45, 1) 0.5s forwards;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+
+          @keyframes strokeAnim {
+            100% {
+              stroke-dashoffset: 0;
+            }
+          }
+
+          .anim-stagger-1 {
+            animation: fadeUp 0.6s 0.2s both;
+          }
+
+          .anim-stagger-2 {
+            animation: fadeUp 0.6s 0.3s both;
+          }
+
+          .anim-stagger-3 {
+            animation: fadeUp 0.6s 0.4s both;
+          }
+        </style>
+        <div class="succ-icon">
+          <svg class="succ-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="succ-circle" cx="26" cy="26" r="23" />
+            <path class="succ-check" d="M15 27 l7 7 l16 -16" />
+          </svg>
+        </div>
+        <h2 class="anim-stagger-1"
+          style="font-family:'Playfair Display',serif; font-size:1.75rem; margin-bottom:0.6rem; color:var(--text);">
+          Payment Successful!</h2>
+        <p class="anim-stagger-2" style="color:var(--text2); font-size:0.95rem; margin-bottom:1.8rem; line-height:1.6;">
+          Your transaction has been securely processed.<br>The parking slot is now released.</p>
+        <div class="anim-stagger-3" style="display:flex; flex-direction:column; gap:0.8rem; width:100%">
+          <button class="btn btn-gold btn-lg" style="justify-content:center; width:100%"
+            onclick="hide('paymentSuccessModal'); downloadReceipt(window.lastPaidBooking)">Download Receipt</button>
+          <button class="btn btn-green btn-lg" style="justify-content:center; width:100%"
+            onclick="hide('paymentSuccessModal'); goToMap()"> Book New Slot</button>
+          <button class="btn btn-lg" style="justify-content:center; width:100%; border:1px solid var(--border)"
+            onclick="hide('paymentSuccessModal')"> Go to Home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: FEEDBACK -->
+  <div class="overlay" id="feedbackModal" onclick="if(event.target===this)hide('feedbackModal')">
+    <div class="modal sm">
+      <div class="modal-body" style="text-align:center;padding:2.5rem">
+        <h2 style="font-family:'Playfair Display',serif;margin-bottom:.5rem">Your Feedback</h2>
+        <p style="color:var(--text2);font-size:.85rem;margin-bottom:1.5rem">How was your parking experience?</p>
+        <div style="display:flex;justify-content:center;gap:.5rem;margin-bottom:1.5rem;font-size:1.8rem;cursor:pointer"
+          id="starRating">
+          <span onclick="setRating(1)">★</span><span onclick="setRating(2)">★</span><span
+            onclick="setRating(3)">★</span><span onclick="setRating(4)">★</span><span onclick="setRating(5)">★</span>
+        </div>
+        <div class="fg"><textarea id="fbComment" placeholder="Tell us more..."
+            style="width:100%;min-height:100px;border-radius:12px;padding:1rem;background:var(--bg3);border:1px solid var(--border);color:var(--text)"></textarea>
+        </div>
+        <button class="btn btn-gold" style="width:100%;justify-content:center" onclick="submitFeedback()">Submit
+          Review</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: PROFILE SETTINGS -->
+  <div class="overlay" id="profileModal" onclick="if(event.target===this)hide('profileModal')">
+    <div class="modal sm">
+      <div class="modal-banner" style="background:var(--gold);height:80px">
+        <button class="modal-close" onclick="hide('profileModal')">×</button>
+        <div class="modal-banner-txt">
+          <h3>Profile Settings</h3>
+          <p>Update your personal & vehicle details</p>
+        </div>
+      </div>
+      <div class="modal-body" style="padding:1.5rem">
+        <div class="fg"><label>Full Name</label><input type="text" id="profName"></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" id="profPhone"></div>
+        <div class="form-row">
+          <div class="fg"><label>Vehicle Number</label><input type="text" id="profVehNo"></div>
+          <div class="fg"><label>Vehicle Type</label>
+            <select id="profVehType">
+              <option value="2W">Two-Wheeler</option>
+              <option value="4W">Four-Wheeler</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem">
+          <button class="btn btn-gold" style="width:100%;justify-content:center" onclick="saveProfile()">Save
+            Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+     MODAL: ADMIN LOGIN
+════════════════════════════════════════════════════════════════════ -->
+  <div class="overlay" id="adminLoginModal" onclick="if(event.target===this)hide('adminLoginModal')">
+    <div class="modal sm">
+      <div class="modal-banner"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80"
+          alt=""><button class="modal-close" onclick="hide('adminLoginModal')">×</button>
+        <div class="modal-banner-txt">
+          <h3>Admin Access</h3>
+          <p>Garuda Mall Parking Management</p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="fg"><label>Admin ID or Phone</label><input type="text" id="adminUser" placeholder="garudamalladmin">
+        </div>
+        <div class="fg"><label>Password</label><input type="password" id="adminPass" placeholder="12345"
+            onkeydown="if(event.key==='Enter')adminLogin()"></div>
+        <div id="adminErr"
+          style="display:none;background:var(--red-bg);border:1px solid rgba(239,68,68,.3);border-radius:8px;padding:.75rem;font-size:.82rem;color:var(--red2);margin-bottom:.9rem">
+          Incorrect credentials. Default: garudamalladmin / 12345</div>
+        <div class="modal-foot"><button class="btn-cancel" onclick="hide('adminLoginModal')">Cancel</button><button
+            class="btn-submit" onclick="adminLogin()">Login to Admin Panel →</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+     MODAL: ADMIN DASHBOARD
+════════════════════════════════════════════════════════════════════ -->
+  <div class="overlay" id="adminModal" onclick="if(event.target===this)hide('adminModal')">
+    <div class="modal xl">
+      <div style="position:relative">
+        <button class="modal-close" onclick="hide('adminModal')"
+          style="position:absolute;top:1rem;right:1rem;z-index:10;background:var(--bg3);color:var(--text)">×</button>
+        <div class="admin-modal-inner">
+          <!-- SIDEBAR -->
+          <div class="admin-side">
+            <div class="admin-side-logo">Garuda<em>Admin</em></div>
+            <div class="anav">
+              <button class="anav-item active" onclick="aPage('overview',this)"><span
+                  class="ai">📊</span>Overview</button>
+              <button class="anav-item" onclick="aPage('slots',this)"><span class="ai">🅿️</span>Manage Slots</button>
+              <button class="anav-item" onclick="aPage('sessions',this)"><span class="ai">⏱</span>Sessions</button>
+              <button class="anav-item" onclick="aPage('users',this)"><span class="ai">👤</span>Users</button>
+
+              <button class="anav-item" onclick="aPage('revenue',this)"><span class="ai">💰</span>Revenue</button>
+              <button class="anav-item" onclick="aPage('settings',this)"><span class="ai">⚙️</span>Settings</button>
+            </div>
+            <div style="padding:.7rem 1rem;border-top:1px solid var(--border)">
+              <button class="btn btn-red btn-xs" style="width:100%;justify-content:center" onclick="adminLogout()">🔓
+                Logout</button>
+            </div>
+          </div>
+          <!-- MAIN -->
+          <div class="admin-main">
+
+
+            <!-- OVERVIEW -->
+            <div class="admin-page on" id="ap-overview">
+              <div class="admin-hd">
+                <h2>Dashboard Overview</h2><span style="font-size:.77rem;color:var(--text2)">Last updated: just
+                  now</span>
+              </div>
+              <div class="stat-row">
+                <div class="stat-box">
+                  <div class="sv" id="ad-rev">₹0</div>
+                  <div class="sl">Today's Revenue</div>
+                  <div class="sd">↑ 0% vs yesterday</div>
+                </div>
+                <div class="stat-box">
+                  <div class="sv" id="ad-sess">0</div>
+                  <div class="sl">Sessions Today</div>
+                  <div class="sd">↑ 0 from yesterday</div>
+                </div>
+                <div class="stat-box">
+                  <div class="sv" id="ad-avail">—</div>
+                  <div class="sl">Slots Available</div>
+                  <div class="sd">Live count</div>
+                </div>
+                <div class="stat-box">
+                  <div class="sv" id="ad-users">0</div>
+                  <div class="sl">Registered Users</div>
+                  <div class="sd">+0 this week</div>
+                </div>
+              </div>
+              <div
+                style="background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.2rem;margin-bottom:1.2rem">
+                <div
+                  style="font-size:.77rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text2);margin-bottom:1rem">
+                  This Week's Revenue</div>
+                <div id="revBars" style="display:flex;flex-direction:column;gap:.5rem"></div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 0.6fr;gap:1.5rem">
+                <div style="background:var(--card);border:1px solid var(--border);border-radius:11px;overflow:hidden">
+                  <div
+                    style="padding:.85rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:.82rem">
+                    Recent Sessions</div>
+                  <table class="atbl">
+                    <thead>
+                      <tr>
+                        <th>Customer</th>
+                        <th>Slot (Vehicle)</th>
+                        <th>Time (In - Out)</th>
+                        <th>Duration</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody id="recentTbl"></tbody>
+                  </table>
+                </div>
+                <div style="background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.4rem">
+                  <div
+                    style="font-weight:700;font-size:.8rem;text-transform:uppercase;margin-bottom:1.2rem;color:var(--text2)">
+                    Live Activity Feed</div>
+                  <div id="adminActivityList"
+                    style="max-height:280px;overflow-y:auto;display:flex;flex-direction:column;gap:.5rem">
+                    <div style="text-align:center;color:var(--text3);padding:2rem;font-size:.8rem">System starting...
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- MANAGE SLOTS -->
+            <div class="admin-page" id="ap-slots">
+              <div class="admin-hd">
+                <h2>Manage All 50 Slots</h2>
+                <div style="display:flex;gap:.5rem"><button class="btn btn-green btn-xs" onclick="aResetSlots()">Reset
+                    All</button></div>
+              </div>
+              <div
+                style="background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.2rem;margin-bottom:1rem">
+                <div
+                  style="font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.65rem;font-weight:600">
+                  Zone A — Two Wheelers</div>
+                <div class="admin-slot-grid" id="aZoneA"></div>
+                <div
+                  style="font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin:.9rem 0 .65rem;font-weight:600">
+                  Zone B — Two Wheelers</div>
+                <div class="admin-slot-grid" id="aZoneB"></div>
+                <div
+                  style="font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin:.9rem 0 .65rem;font-weight:600">
+                  Zone C — Four Wheelers</div>
+                <div class="admin-slot-grid" id="aZoneC"></div>
+                <div
+                  style="font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin:.9rem 0 .65rem;font-weight:600">
+                  Zone D — Four Wheelers</div>
+                <div class="admin-slot-grid" id="aZoneD"></div>
+                <div
+                  style="font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin:.9rem 0 .65rem;font-weight:600">
+                  Zone E — Four Wheelers</div>
+                <div class="admin-slot-grid" id="aZoneE"></div>
+                <div style="display:flex;gap:.9rem;margin-top:1rem;flex-wrap:wrap">
+                  <span class="badge badge-green">● Available</span>
+                  <span class="badge badge-red">● Occupied</span>
+                  <span class="badge badge-gray">● Blocked</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SESSIONS -->
+            <div class="admin-page" id="ap-sessions">
+              <div class="admin-hd">
+                <h2>Parking Sessions</h2>
+                <select id="sessionFilter" class="fg" style="margin:0;width:160px"
+                  onchange="filterSessions(this.value)">
+                  <option value="all">All sessions</option>
+                  <option value="active">Active</option>
+                  <option value="paid">Paid</option>
+                  <option value="pending">Pending</option>
+                </select>
+              </div>
+              <div style="background:var(--card);border:1px solid var(--border);border-radius:11px;overflow:hidden">
+                <table class="atbl">
+                  <thead>
+                    <tr>
+                      <th>Customer</th>
+                      <th>Slot & Vehicle</th>
+                      <th>Time (In - Out)</th>
+                      <th>Duration</th>
+                      <th>Paid Amount</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="sessTbl"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- USERS -->
+            <div class="admin-page" id="ap-users">
+              <div class="admin-hd">
+                <h2>Registered Users</h2><span style="font-size:.82rem;color:var(--text2)"><span
+                    id="ad-users-count">0</span> total</span>
+              </div>
+              <div style="background:var(--card);border:1px solid var(--border);border-radius:11px;overflow:hidden">
+                <table class="atbl">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Phone</th>
+                      <th>Vehicle</th>
+                      <th>Type</th>
+                      <th>Joined</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="usersTbl"></tbody>
+                </table>
+              </div>
+            </div>
+
+
+
+
+            <div class="admin-page" id="ap-revenue">
+              <div class="admin-hd">
+                <h2>Revenue Reports</h2>
+              </div>
+              <div class="stat-row">
+                <div class="stat-box">
+                  <div class="sv" id="rev-today">₹0</div>
+                  <div class="sl">Today</div>
+                </div>
+                <div class="stat-box">
+                  <div class="sv" id="rev-weekly">₹0</div>
+                  <div class="sl">This Week</div>
+                </div>
+                <div class="stat-box">
+                  <div class="sv" id="rev-monthly">₹0</div>
+                  <div class="sl">This Month</div>
+                </div>
+                <div class="stat-box">
+                  <div class="sv" id="rev-alltime">₹0</div>
+                  <div class="sl">All Time</div>
+                </div>
+              </div>
+              <div style="background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.2rem">
+                <div
+                  style="font-size:.77rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text2);margin-bottom:1rem">
+                  Daily Revenue — Last 14 Days</div>
+                <div id="revBars2" style="display:flex;flex-direction:column;gap:.5rem"></div>
+              </div>
+            </div>
+
+            <!-- SETTINGS -->
+            <div class="admin-page" id="ap-settings">
+              <div class="admin-hd">
+                <h2>System Settings</h2>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem">
+                <div style="background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.3rem">
+                  <div style="font-weight:700;font-size:.88rem;margin-bottom:1.1rem">💰 Parking Rates</div>
+                  <div class="fg"><label>2-Wheeler Rate (₹/hr)</label><input type="number" id="r2w" value="10" min="1">
+                  </div>
+                  <div class="fg"><label>4-Wheeler Rate (₹/hr)</label><input type="number" id="r4w" value="30" min="1">
+                  </div>
+                  <button class="btn btn-gold" style="width:100%;justify-content:center;margin-top:.3rem"
+                    onclick="saveRates()">Save Rates</button>
+                </div>
+                <div style="background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.3rem">
+                  <div style="font-weight:700;font-size:.88rem;margin-bottom:1.1rem">🔐 Change Password</div>
+                  <div class="fg"><label>Current Password</label><input type="password" placeholder="Current"></div>
+                  <div class="fg"><label>New Password</label><input type="password" placeholder="New password"></div>
+                  <div class="fg"><label>Confirm</label><input type="password" placeholder="Confirm new"></div>
+                  <button class="btn btn-gold" style="width:100%;justify-content:center"
+                    onclick="updateAdminPassword()">Update Password</button>
+                </div>
+                <div style="background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.3rem">
+                  <div style="font-weight:700;font-size:.88rem;margin-bottom:1.1rem">⚙️ System Settings</div>
+                  <div class="toggle-row"><span>Auto SMS on payment</span>
+                    <div class="toggle on" onclick="this.classList.toggle('on')"></div>
+                  </div>
+                  <div class="toggle-row"><span>Email receipts</span>
+                    <div class="toggle on" onclick="this.classList.toggle('on')"></div>
+                  </div>
+
+                  <div class="toggle-row"><span>Night parking (after midnight)</span>
+                    <div class="toggle on" onclick="this.classList.toggle('on')"></div>
+                  </div>
+                </div>
+                <div style="background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.3rem">
+                  <div style="font-weight:700;font-size:.88rem;margin-bottom:1.1rem">📡 System Status</div>
+                  <div style="display:flex;flex-direction:column;gap:.65rem;font-size:.82rem">
+                    <div style="display:flex;justify-content:space-between"><span>Backend API</span><span
+                        class="badge badge-green">● Online</span></div>
+                    <div style="display:flex;justify-content:space-between"><span>Database</span><span
+                        class="badge badge-green">● Connected</span></div>
+                    <div style="display:flex;justify-content:space-between"><span>System Mode</span><span
+                        class="badge badge-gold">Live Updates</span></div>
+                  </div>
+                  <div style="margin-top:1.5rem;padding-top:1.2rem;border-top:1px dashed var(--border)">
+                    <p style="font-size:0.7rem;color:var(--text3);margin-bottom:0.8rem">Danger Zone: Clears all
+                      historical data and resets system to zero.</p>
+                    <button class="btn btn-red btn-xs" style="width:100%;justify-content:center"
+                      onclick="aClearAllLogs()">🗑️ Clear All Database Logs</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: SESSION DETAILS (ADMIN) -->
+  <div class="overlay" id="sessionDetailModal" onclick="if(event.target===this)hide('sessionDetailModal')">
+    <div class="modal md">
+      <div class="modal-banner" style="height:100px">
+        <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&q=80" alt="Session">
+        <div class="modal-banner-txt">
+          <h3>Session Details</h3>
+          <p>Admin Control View</p>
+        </div>
+      </div>
+      <div class="modal-body" id="sessionDetailBody">
+        <!-- Dynamic Content -->
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-ghost" onclick="hide('sessionDetailModal')">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script>
+    // Detect host for dynamic API connectivity
+    const HOST = window.location.origin;
+    const API_URL = `${window.location.origin}/api`;
+    const socket = io(HOST);
+
+    let currentUser = null;
+    try {
+      const storageUser = localStorage.getItem('garuda-user');
+      if (storageUser && storageUser !== 'undefined') {
+        currentUser = JSON.parse(storageUser);
+      }
+    } catch (e) {
+      console.warn('Invalid user session');
+    }
+
+    // ════════════════════════════════════════════════
+    //  GLOBAL UTILITY: REAL-TIME COST & DURATION
+    // ════════════════════════════════════════════════
+    function calculateCurrentCost(s) {
+      if (!s || !s.entryTime) return { cost: 0, duration: '--', h: 0, m: 0, s: 0, sc: 0 };
+      const setts = window.parkingSettings || { pricing: { rate2W: 10, rate4W: 30 } };
+      const rate = s.vehicleType === '4W' ? setts.pricing.rate4W : setts.pricing.rate2W;
+
+      const start = new Date(s.entryTime);
+      const end = (s.status === 'completed' || s.status === 'paid') && s.exitTime
+        ? new Date(s.exitTime)
+        : new Date();
+      const secTotal = Math.floor((end - start) / 1000);
+      const h = Math.floor(secTotal / 3600);
+      const m = Math.floor((secTotal % 3600) / 60);
+      const sVal = secTotal % 60;
+
+      const cost = Math.max(rate, Math.ceil(secTotal / 3600) * rate);
+      return {
+        cost,
+        duration: `${h}h ${m}m`,
+        h, m, s: sVal, sc: sVal
+      };
+    }
+
+    // Create Toast Container if missing
+    if (!document.getElementById('toast')) {
+      const t = document.createElement('div');
+      t.id = 'toast';
+      document.body.appendChild(t);
+    }
+
+    // Initialize Slot State (50 slots)
+    let slotState = {};
+    function populateInitialSlots() {
+      ['A', 'B', 'C', 'D', 'E'].forEach(z => {
+        for (let i = 1; i <= 10; i++) slotState[z + i] = 0;
+      });
+    }
+    populateInitialSlots();
+
+    // Global Fetch Wrapper
+    async function apiFetch(endpoint, options = {}) {
+      const headers = { 'Content-Type': 'application/json', ...options.headers };
+      if (currentUser?.token) headers['Authorization'] = `Bearer ${currentUser.token}`;
+
+      let res;
+      try {
+        res = await fetch(`${API_URL}${endpoint}`, { ...options, headers });
+      } catch (err) {
+        throw new Error(`Network error. Ensure the backend (${API_URL}) is running.`);
+      }
+      let data;
+      const contentType = res.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        data = await res.json();
+        if (!res.ok) throw new Error(data.message || 'Something went wrong');
+      } else {
+        const text = await res.text();
+        if (!res.ok) throw new Error(`Server error (${res.status}): ${text.substring(0, 100)}`);
+        data = { success: true, message: text };
+      }
+      return data;
+    }
+
+    // ════════════════════════════════════════════════
+    //  NAV & AUTH UI SYNC
+    // ════════════════════════════════════════════════
+    function syncNav() {
+      const container = document.getElementById('navButtons');
+      if (!container) return;
+
+      const hasActive = activeBooking && (activeBooking.status === 'active' || activeBooking.status === 'pending');
+
+      if (currentUser) {
+        const adminBtn = (currentUser.role === 'admin')
+          ? `<button class="btn btn-ghost btn-sm" onclick="show('adminLoginModal')">Admin</button>`
+          : '';
+
+        container.innerHTML = `
+          <span style="font-size:0.8rem; color:var(--text2); margin-right:0.5rem">Hi, <strong>${currentUser.name.split(' ')[0]}</strong></span>
+          <button class="btn btn-ghost btn-sm" onclick="openUserDashboard()">My Dashboard</button>
+          ${adminBtn}
+          <button class="btn btn-ghost btn-sm" onclick="userLogout()">Logout</button>
+        `;
+
+        // Hide Hero Reserve button if user is already logged in
+        const heroBtn = document.getElementById('heroReserveBtn');
+        if (heroBtn) heroBtn.style.display = 'none';
+
+        // Hide Selection Bar if user has an active session
+        const selBar = document.getElementById('selBar');
+        if (selBar && hasActive) selBar.classList.remove('show');
+
+      } else {
+        const heroBtn = document.getElementById('heroReserveBtn');
+        if (heroBtn) heroBtn.style.display = 'inline-block';
+
+        container.innerHTML = `
+          <button class="btn btn-ghost btn-sm" onclick="openLogin()">Login</button>
+          <button class="btn btn-ghost btn-sm" onclick="openRegister()">Register</button>
+          <button class="btn btn-ghost btn-sm" onclick="show('adminLoginModal')">Admin</button>
+        `;
+      }
+    }
+
+    function openLogin() { swTab('login', true); show('bookModal'); }
+    function openRegister() { swTab('register', true); show('bookModal'); }
+    function openAuth(t, h = false) { swTab(t, h); show('bookModal'); }
+
+    function userLogout() {
+      currentUser = null;
+      localStorage.removeItem('garuda-user');
+      toast('Logged out successfully', 'info');
+      syncNav();
+      if (typeof initSlots === 'function') initSlots();
+    }
+
+    // Call on load
+    window.addEventListener('DOMContentLoaded', async () => {
+      syncNav();
+      // Initial rates sync from backend (even if not logged in)
+      try {
+        const res = await apiFetch('/admin/settings');
+        window.parkingSettings = res.data;
+        if (typeof syncTransparentRates === 'function') syncTransparentRates(res.data);
+      } catch (e) { console.warn('Public settings fetch failed', e); }
+    });
+    // ════════════════════════════════════════════════
+    //  THEME
+    // ════════════════════════════════════════════════
+    let theme = localStorage.getItem('garuda-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    function toggleTheme() {
+      theme = theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('garuda-theme', theme);
+      toast('Switched to ' + (theme === 'dark' ? '🌙 Night' : '☀️ Day') + ' mode', 'info');
+    }
+
+    // ════════════════════════════════════════════════
+    //  TOAST
+    // ════════════════════════════════════════════════
+    function toast(msg, type = 'info', duration = 3000) {
+      const c = document.getElementById('toast');
+      const el = document.createElement('div');
+      el.className = 'toast-item ' + type;
+      const icons = { success: '✅', error: '❌', info: 'ℹ️' };
+      el.innerHTML = `<span>${icons[type] || 'ℹ️'}</span><span>${msg}</span>`;
+      c.appendChild(el);
+      setTimeout(() => { el.style.opacity = '0'; el.style.transform = 'translateX(20px)'; el.style.transition = 'all .3s'; setTimeout(() => el.remove(), 300) }, duration);
+    }
+
+    // ════════════════════════════════════════════════
+    //  SMART STATE
+    // ════════════════════════════════════════════════
+    let adminActivityLog = [];
+    let userFeedback = [{ user: 'Ravi Kumar', rating: 5, comment: 'Seamless exit with QR code!' }];
+    let targetMins = 0;
+    let hasNotified = false;
+    let activeBooking = null;
+
+    socket.emit('join-parking');
+    socket.on('booking-updated', async (data) => {
+      console.log('🔔 Booking Update Received:', data);
+
+      // Refresh user details if logged in (to get new lifetime stats)
+      if (currentUser) {
+        try {
+          const uRes = await apiFetch('/auth/me');
+          if (uRes && uRes.data) currentUser = { ...uRes.data, token: currentUser.token };
+        } catch (e) { }
+      }
+
+      // Refresh relevant UI
+      if (document.getElementById('userDashModal').classList.contains('on')) openUserDashboard();
+      if (document.getElementById('adminModal').classList.contains('on')) handleAdminSync();
+      initSlots();
+    });
+
+    socket.on('slot-update', (data) => {
+      slotState[data.slotId] = data.status === 'occupied' ? 1 : data.status === 'blocked' ? 2 : 0;
+      renderSlots();
+      if (document.getElementById('adminModal').classList.contains('on')) {
+        initSlots();
+        handleAdminSync(); // Stats like "Available Slots" change here
+      }
+    });
+
+    socket.on('profile-updated', () => {
+      if (document.getElementById('adminModal').classList.contains('on')) handleAdminSync();
+    });
+
+    // ════════════════════════════════════════════════
+    //  ADMIN REAL-TIME SYNC HELPER
+    // ════════════════════════════════════════════════
+    async function handleAdminSync() {
+      if (!document.getElementById('adminModal').classList.contains('on')) return;
+      try {
+        // 1. Refresh global stats
+        const { data: stats } = await apiFetch('/admin/dashboard');
+        renderAdminStats(stats);
+
+        // 2. Refresh sessions table (respecting filter)
+        const { data: bookings } = await apiFetch('/admin/bookings');
+        window.allAdminBookings = bookings;
+        const sessionsPage = document.getElementById('ap-sessions');
+        if (sessionsPage && sessionsPage.classList.contains('on')) {
+          const flt = document.getElementById('sessionFilter')?.value || 'all';
+          filterSessions(flt);
+        }
+
+        // 3. Refresh overview table (filtered active)
+        const activeBks = bookings.filter(b => b.status === 'active' && b.slot && b.user);
+        renderRecentBookings(activeBks.slice(0, 10));
+
+        // 4. Update Users list
+        const usersNavPage = document.getElementById('ap-users');
+        if (usersNavPage && usersNavPage.classList.contains('on')) {
+          const { data: users } = await apiFetch('/admin/users');
+          renderAdminUsers(users);
+        }
+      } catch (e) { console.warn('Admin Sync Error:', e); }
+    }
+
+    function logActivity(action, details) {
+      const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      adminActivityLog.unshift({ time, action, details });
+      if (adminActivityLog.length > 15) adminActivityLog.pop();
+      renderAdminActivity();
+    }
+
+    // ════════════════════════════════════════════════
+    //  MODAL HELPERS
+    // ════════════════════════════════════════════════
+    const show = id => document.getElementById(id).classList.add('on');
+    const hide = id => document.getElementById(id).classList.remove('on');
+    function smoothScroll(e, id) { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }); }
+
+    // ════════════════════════════════════════════════
+    //  DYNAMIC USER DASHBOARD POPULATOR
+    // ════════════════════════════════════════════════
+    async function openUserDashboard() {
+      if (!currentUser) return toast('Please login or register to access your dashboard', 'info');
+
+      // Auto-refresh stale user details invisibly
+      try {
+        const uRes = await apiFetch('/auth/me');
+        if (uRes && uRes.data) {
+          currentUser = { ...uRes.data, token: currentUser.token };
+          localStorage.setItem('garuda-user', JSON.stringify(currentUser));
+        }
+      } catch (e) { console.warn('Refresh user error:', e); }
+
+      // Setup dynamic user variables
+      document.getElementById('dashUserName').textContent = currentUser.name || 'Guest User';
+      document.getElementById('dashUserContact').textContent = currentUser.phone || 'No Phone Registered';
+      const veh = currentUser.vehicles && currentUser.vehicles.length > 0 ? currentUser.vehicles[0] : null;
+      document.getElementById('dashUserVehicle').textContent = veh ? `${veh.number} · ${veh.type}` : 'No vehicle registered';
+
+      // Update lifetime stats (Aggregated from /auth/me)
+      const ts = document.getElementById('ud-total-sessions');
+      const tsp = document.getElementById('ud-total-spent');
+      if (ts) ts.textContent = currentUser.sessionsCount || 0;
+      if (tsp) tsp.textContent = `₹${currentUser.totalSpent || 0}`;
+
+      // Fetch dynamic history
+      try {
+        const hRes = await apiFetch('/bookings/my-bookings');
+        window.userHistoryCache = hRes.data;
+        const histContainer = document.getElementById('dashboardHistorySection');
+        const histList = document.getElementById('dashboardHistoryList');
+        if (hRes.data && hRes.data.length > 0) {
+          const actives = hRes.data.filter(s => s.status === 'active');
+          if (histContainer) histContainer.style.display = actives.length > 0 ? 'block' : 'none';
+          if (histList) {
+            histList.innerHTML = actives.map(s => {
+              const { cost, duration } = calculateCurrentCost(s);
+              return `
+              <div class="ud-hist-row" style="transition:all 0.3s; display:flex; justify-content:space-between; align-items:center; padding:0.8rem 0; border-bottom:1px solid var(--border)" onmouseover="this.style.background='var(--bg3)'" onmouseout="this.style.background='transparent'">
+                <div style="display:flex; flex-direction:column; gap:2px">
+                  <span style="font-weight:600; font-size:0.9rem">${s.slot?.slotId || '??'} · ${(s.vehicleType || '2W')}</span>
+                  <span style="color:var(--text3); font-size:0.7rem">${new Date(s.entryTime).toLocaleDateString()} · Active Now</span>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-weight:700; color:var(--gold)">₹${cost}</div>
+                  <div style="font-size:0.6rem; color:var(--text3)">Live Estimate</div>
+                </div>
+              </div>`;
+            }).join('');
+          }
+        } else {
+          if (histContainer) histContainer.style.display = 'none';
+        }
+      } catch (err) {
+        console.error('History fetch error', err);
+      }
+
+      // Fetch active booking if null
+      if (!activeBooking) {
+        try {
+          const { data: act } = await apiFetch('/bookings/active');
+          if (act) activeBooking = act;
+        } catch (e) { console.warn('Active booking check error:', e); }
+      }
+
+      // ════════════════════════════════════════════════
+      //  USER DASHBOARD LIVE TIMER & SYNC
+      // ════════════════════════════════════════════════
+      if (window.userDashTimer) clearInterval(window.userDashTimer);
+
+      if (activeBooking) {
+        document.getElementById('ud-status').className = 'badge badge-gold';
+        document.getElementById('ud-status').textContent = '● Parking Active';
+        document.getElementById('ud-slot').textContent = activeBooking.slot?.slotId || '--';
+        document.getElementById('ud-slot-type').textContent = activeBooking.vehicleType === '2W' ? 'Two-Wheeler' : 'Four-Wheeler';
+        document.getElementById('ud-loc').textContent = '📍 Floor G, Zone ' + (activeBooking.slot?.slotId?.[0] || 'Unknown');
+
+        const entryDate = new Date(activeBooking.entryTime);
+        const isValid = !isNaN(entryDate.getTime());
+        document.getElementById('ud-timer-lbl').textContent = isValid ? 'Since ' + entryDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'No timer running';
+
+        const updateDashTimer = () => {
+          if (!activeBooking) {
+            if (window.userDashTimer) clearInterval(window.userDashTimer);
+            return;
+          }
+          const { cost, duration, sc } = calculateCurrentCost(activeBooking);
+          document.getElementById('ud-timer').textContent = `${duration} ${(sc || 0).toString().padStart(2, '0')}s`;
+          document.getElementById('ud-cost').textContent = `₹${cost}`;
+        };
+        updateDashTimer();
+        window.userDashTimer = setInterval(updateDashTimer, 1000);
+
+
+
+      } else {
+        document.getElementById('ud-status').className = 'badge badge-green';
+        document.getElementById('ud-status').textContent = 'No Active Session';
+        document.getElementById('ud-slot').textContent = '--';
+        document.getElementById('ud-slot-type').textContent = '--';
+        document.getElementById('ud-timer').textContent = '0h 0m 0s';
+        document.getElementById('ud-timer-lbl').textContent = 'No timer running';
+        document.getElementById('ud-cost').textContent = '₹0';
+        document.getElementById('ud-loc').textContent = '📍 Park your vehicle to track live position';
+
+      }
+
+      // Sync specific settings if available
+      if (window.parkingSettings && window.parkingSettings.pricing) {
+        const r2 = window.parkingSettings.pricing.rate2W;
+        const r4 = window.parkingSettings.pricing.rate4W;
+        const lbl = document.getElementById('expectedDuration');
+        if (lbl) {
+          // Optionally update labels in book modal
+        }
+      }
+
+      document.getElementById('dashPayBtn').style.display = activeBooking ? 'flex' : 'none';
+      document.getElementById('dashPaymentSection').style.display = 'none';
+
+      // Hide booking UI if session active
+      if (activeBooking) {
+        if (document.getElementById('selBar')) document.getElementById('selBar').classList.remove('show');
+        if (document.getElementById('topBookBtn')) document.getElementById('topBookBtn').style.display = 'none';
+        selSlot = null;
+        renderSlots();
+      }
+
+      show('userDashModal');
+    }
+
+    function handleProfileSettings() {
+      if (!currentUser) return;
+      document.getElementById('profName').value = currentUser.name || '';
+      document.getElementById('profPhone').value = currentUser.phone || '';
+      // Populate vehicle details from the first vehicle if exists
+      const veh = (currentUser.vehicles && currentUser.vehicles.length > 0) ? currentUser.vehicles[0] : {};
+      document.getElementById('profVehNo').value = veh.number || '';
+      document.getElementById('profVehType').value = veh.type || '2W';
+      show('profileModal');
+    }
+
+    async function saveProfile() {
+      const name = document.getElementById('profName').value;
+      const phone = document.getElementById('profPhone').value;
+      const vehicleNumber = document.getElementById('profVehNo').value;
+      const vehicleType = document.getElementById('profVehType').value;
+
+      if (!name || !phone) return toast('Name and Phone are required', 'error');
+
+      try {
+        const res = await apiFetch('/users/profile', {
+          method: 'PUT',
+          body: JSON.stringify({ name, phone, vehicleNumber, vehicleType })
+        });
+
+        // Update local session data preserving the token
+        currentUser = { ...res.data, token: currentUser.token };
+        localStorage.setItem('garuda-user', JSON.stringify(currentUser));
+
+        toast('Profile updated and synced!', 'success');
+        hide('profileModal');
+
+        // Refresh dashboard and navigation
+        openUserDashboard();
+        syncNav();
+
+        // Trigger immediate admin refresh via socket
+        if (typeof socket !== 'undefined') socket.emit('profile-updated', { userId: currentUser._id, name: currentUser.name });
+
+        logActivity('Profile Update', `User ${name} updated their details`);
+      } catch (err) { toast(err.message, 'error'); }
+    }
+
+    function downloadHistory() {
+      if (!window.userHistoryCache || window.userHistoryCache.length === 0) {
+        return toast('No booking history found to generate report.', 'info');
+      }
+
+      const historyRows = window.userHistoryCache.map(s => {
+        const { cost, duration } = calculateCurrentCost(s);
+        const isActive = s.status === 'active';
+
+        return `
+          <tr>
+            <td>${new Date(s.entryTime).toLocaleDateString()}</td>
+            <td>
+              <div class="val">${currentUser.name}</div>
+              <div class="sub">${currentUser.phone}</div>
+            </td>
+            <td>
+              <div class="val">${s.slot?.slotId || '??'}</div>
+              <div class="sub">${s.vehicleType === '4W' ? 'Four Wheeler' : 'Two Wheeler'}</div>
+            </td>
+            <td>${duration}</td>
+            <td class="amount">₹${cost}</td>
+            <td><span class="badge ${isActive ? 'b-gold' : 'b-green'}">${s.status.toUpperCase()}</span></td>
+          </tr>
+        `;
+      }).join('');
+
+      const historyHTML = `
+        <html>
+        <head>
+          <title>Parking Statement - Garuda Mall Digital Hub</title>
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+            body { font-family: 'Inter', sans-serif; padding: 40px; color: #1a1a1a; background: #fff; }
+            .a4-page { width: 100%; max-width: 800px; margin: 0 auto; border: 1px solid #eee; padding: 50px; }
+            .header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #D4AF37; padding-bottom: 20px; margin-bottom: 30px; }
+            .brand h1 { margin: 0; color: #D4AF37; font-size: 1.8rem; letter-spacing: 2px; }
+            .brand p { margin: 5px 0 0; font-size: 0.8rem; color: #666; text-transform: uppercase; }
+            .user-info { text-align: right; font-size: 0.85rem; color: #444; }
+            
+            table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+            th { background: #f9f9f9; text-align: left; padding: 12px 10px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #888; border-bottom: 2px solid #eee; }
+            td { padding: 15px 10px; border-bottom: 1px solid #eee; font-size: 0.85rem; }
+            .val { font-weight: 600; }
+            .sub { font-size: 0.7rem; color: #888; margin-top: 2px; }
+            .amount { font-weight: 700; color: #D4AF37; }
+            
+            .badge { padding: 4px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
+            .b-gold { background: #fef3c7; color: #92400e; }
+            .b-green { background: #dcfce7; color: #166534; }
+            
+            .footer { margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px; text-align: center; }
+            .footer p { font-size: 0.75rem; color: #999; margin: 5px 0; }
+            @media print { 
+              body { padding: 0; }
+              .a4-page { border: none; padding: 0; }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="a4-page">
+            <div class="header">
+              <div class="brand">
+                <h1>Garuda Mall Parking</h1>
+                <p>Smart Digital Hub — Management Statement</p>
+              </div>
+              <div class="user-info">
+                <strong>User:</strong> ${currentUser.name}<br>
+                <strong>Phone:</strong> ${currentUser.phone}<br>
+                <strong>Date:</strong> ${new Date().toLocaleDateString()}
+              </div>
+            </div>
+
+            <div style="background:#fdf9f0; padding:15px; border-radius:8px; margin-bottom:25px; border-left:4px solid #D4AF37; display:flex; justify-content:space-between; align-items:center">
+              <span style="font-size:0.9rem; font-weight:600">Complete Parking Activity Report</span>
+              <span style="font-size:0.75rem; color:#888">${window.userHistoryCache.length} Total Sessions</span>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Identification</th>
+                  <th>Slot / Vehicle</th>
+                  <th>Duration</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${historyRows}
+              </tbody>
+            </table>
+
+            <div class="footer">
+              <p><strong>Garuda Mall</strong></p>
+              <p>Nagarathpet, Bengaluru — 560002, Karnataka, India</p>
+              <p style="color:#D4AF37; margin-top:10px; font-weight:600">Thank you for using our smart facilities.</p>
+              <p style="font-size:0.6rem; color:#ccc; margin-top:20px">System Generated Statement | Confidential Document</p>
+            </div>
+          </div>
+          <script>window.onload = () => { window.print(); setTimeout(() => window.close(), 1000); }<\/script>
+        </body>
+        </html>
+      `;
+
+      const win = window.open('', '_blank', 'width=900,height=850');
+      win.document.write(historyHTML);
+      win.document.close();
+      toast('Professional A4 statement generated!', 'success');
+    }
+    //  ADMIN ACTIVITY RENDER
+    // ════════════════════════════════════════════════
+    function renderAdminActivity() {
+      const list = document.getElementById('adminActivityList');
+      if (!list) return;
+      list.innerHTML = adminActivityLog.map(a => `
+    <div class="activity-item">
+      <span class="activity-time">${a.time}</span>
+      <span class="activity-action">${a.action}</span>
+      <span style="color:var(--text2)">${a.details}</span>
+    </div>
+  `).join('') || '<div style="text-align:center;color:var(--text3);padding:2rem">Waiting for activity...</div>';
+    }
+
+
+    function goToMap() {
+      // Close the modal first
+      hide('bookModal');
+
+      // Delay to allow the modal's exit transition to finish
+      setTimeout(() => {
+        const slotsSection = document.getElementById('slots');
+        if (slotsSection) {
+          // Robust scroll with offset handling
+          const top = slotsSection.getBoundingClientRect().top + window.pageYOffset - 90;
+          window.scrollTo({ top, behavior: 'smooth' });
+
+          // Visual "Glow" Pulse to guide the eye
+          const panel = document.querySelector('.slot-panel');
+          if (panel) {
+            panel.style.boxShadow = '0 0 50px var(--gold)';
+            panel.style.transform = 'scale(1.03)';
+            panel.style.transition = 'all 0.8s cubic-bezier(0.19, 1, 0.22, 1)';
+            setTimeout(() => {
+              panel.style.boxShadow = '';
+              panel.style.transform = '';
+            }, 2000);
+          }
+        }
+      }, 400);
+    }
+
+    async function handleRegister() {
+      const name = document.querySelector('#f-reg input[placeholder="Your full name"]').value;
+      const phone = document.querySelector('#f-reg input[placeholder="10-digit number"]').value;
+      const vehNo = document.querySelector('#f-reg input[placeholder="KA-01-AB-1234"]').value;
+      const vehType = document.querySelector('#f-reg select').value.includes('Two') ? '2W' : '4W';
+      const emailRaw = document.querySelector('#f-reg input[type="email"]').value;
+      // Email is required by the DB — auto-generate one if empty
+      const email = emailRaw || `user${phone}@garudamallparking.local`;
+      const pass = document.querySelector('#f-reg input[type="password"]').value;
+
+      if (!phone || !pass || !name) return toast('Please fill all required fields (Name, Phone, Password)', 'error');
+
+      try {
+        const res = await apiFetch('/auth/register', {
+          method: 'POST',
+          body: JSON.stringify({ name, email, phone, password: pass, vehicles: vehNo ? [{ number: vehNo, type: vehType }] : [] })
+        });
+        currentUser = res.data;
+        localStorage.setItem('garuda-user', JSON.stringify(currentUser));
+        syncNav();
+        toast('Registration successful! You can now login.', 'success');
+        swTab('login');
+        document.getElementById('loginPhone').value = phone;
+        document.getElementById('loginPass').value = pass;
+      } catch (err) { toast(err.message, 'error'); }
+    }
+
+    let currentRating = 0;
+    function setRating(n) {
+      currentRating = n;
+      document.querySelectorAll('#starRating span').forEach((s, i) => s.style.color = i < n ? 'var(--gold)' : 'var(--text3)');
+    }
+    function submitFeedback() {
+      const comment = document.getElementById('fbComment').value;
+      if (currentRating === 0) return toast('Please select a rating!', 'error');
+      userFeedback.unshift({ user: 'Active User', rating: currentRating, comment });
+      logActivity('User Feedback', `${currentRating} stars: "${comment.substring(0, 20)}..."`);
+      toast('Thank you for your feedback!', 'success');
+      hide('feedbackModal');
+      renderFeedback();
+    }
+
+
+
+    // ════════════════════════════════════════════════
+    //  50-SLOT STATE & RENDERING
+    // ════════════════════════════════════════════════
+    const ZONES = {
+      A: { label: '2W', slots: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10'] },
+      B: { label: '2W', slots: ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9', 'B10'] },
+      C: { label: '4W', slots: ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10'] },
+      D: { label: '4W', slots: ['D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'D10'] },
+      E: { label: '4W', slots: ['E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7', 'E8', 'E9', 'E10'] },
+    };
+
+    async function initSlots() {
+      try {
+        const { data } = await apiFetch('/slots');
+        if (data && Array.isArray(data)) {
+          data.forEach(s => {
+            if (s.slotId) slotState[s.slotId] = s.status === 'occupied' ? 1 : s.status === 'blocked' ? 2 : 0;
+          });
+        }
+      } catch (err) {
+        console.error('Slot init error:', err.message);
+      }
+      renderSlots();
+    }
+
+    let selSlot = null;
+
+    function renderSlots() {
+      ['A', 'B', 'C', 'D', 'E'].forEach(z => {
+        const el = document.getElementById('z' + z);
+        if (!el) return;
+        el.innerHTML = ZONES[z].slots.map(id => {
+          const s = slotState[id];
+          const cls = s === 1 ? 'oc' : s === 2 ? 'bl' : selSlot === id ? 'sl' : 'av';
+          return `<div class="slot ${cls}" onclick="pickSlot('${id}')" title="${id} · ${ZONES[z].label}">${id}<div class="slot-sub">${ZONES[z].label}</div></div>`;
+        }).join('');
+        // Admin
+        const ae = document.getElementById('aZone' + z);
+        if (ae) ae.innerHTML = ZONES[z].slots.map(id => {
+          const s = slotState[id];
+          return `<div class="as ${s === 1 ? 'oc' : s === 2 ? 'bl' : 'av'}" onclick="aToggleSlot('${id}')" title="Click to toggle">${id}</div>`;
+        }).join('');
+      });
+      const av = Object.values(slotState).filter(v => v === 0).length;
+      const oc = Object.values(slotState).filter(v => v === 1).length;
+      const bl = Object.values(slotState).filter(v => v === 2).length;
+      const set = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
+      set('avN', av); set('ocN', oc); set('blN', bl);
+      set('ad-avail', av);
+    }
+
+    function pickSlot(id) {
+      if (!id) return;
+      const s = slotState[id] === undefined ? 0 : slotState[id]; // Robust check
+      if (s !== 0) return toast(`Slot ${id} is currently unavailable.`, 'info');
+
+      selSlot = selSlot === id ? null : id;
+      renderSlots();
+
+      const bar = document.getElementById('selBar');
+      const code = document.getElementById('selCode');
+      const info = document.getElementById('selInfo');
+      const bookLbl = document.getElementById('bookSlotLabel');
+
+      const topBtn = document.getElementById('topBookBtn');
+      const topCode = document.getElementById('topBookCode');
+
+      if (selSlot) {
+        if (activeBooking) return toast('You already have an active session!', 'info');
+
+        if (bar) bar.classList.add('show');
+        if (topBtn) {
+          topBtn.style.display = 'inline-flex';
+          topBtn.style.opacity = '1';
+          topBtn.style.pointerEvents = 'auto';
+        }
+        if (topCode) topCode.textContent = selSlot;
+        if (code) code.textContent = selSlot;
+        if (info) info.textContent = `selected · Zone ${selSlot[0]} · Available`;
+        if (bookLbl) bookLbl.textContent = selSlot + ' — ' + (selSlot[0] <= 'B' ? 'Two-Wheeler ₹10/hr' : 'Four-Wheeler ₹30/hr');
+        toast(`Slot ${selSlot} selected!`, 'success', 2000);
+      } else {
+        if (bar) bar.classList.remove('show');
+        if (topBtn) {
+          topBtn.style.display = 'none';
+        }
+        if (bookLbl) bookLbl.textContent = 'None';
+      }
+    }
+
+    // ════════════════════════════════════════════════
+    //  TIMER & CALC
+    // (Replaced by Global Utility at line 3389)
+    // ════════════════════════════════════════════════
+
+
+    setInterval(() => {
+      if (activeBooking && activeBooking.status === 'active') {
+        const { cost, duration } = calculateCurrentCost(activeBooking);
+        const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+        set('ud-timer', duration);
+        set('ud-cost', '₹' + cost);
+        set('ud-pay-amt', cost);
+      }
+    }, 1000);
+
+    function recalc() {
+      const e = document.getElementById('ctype');
+      if (!e) return;
+      const rate = parseInt(e.value);
+      const hours = parseInt(document.getElementById('chours').value);
+      const lbl = document.getElementById('hlbl');
+      const amt = document.getElementById('camt');
+      if (lbl) lbl.textContent = hours + (hours === 1 ? ' hr' : ' hrs');
+      if (amt) amt.textContent = '₹' + (rate * hours);
+    }
+
+    // ════════════════════════════════════════════════
+    //  BOOKING & PAYMENT FLOW
+    // ════════════════════════════════════════════════
+    function swTab(t, hideTabs = false, openDurationOnly = false) {
+      const tabs = document.getElementById('authTabs');
+      if (tabs) tabs.style.display = (hideTabs || openDurationOnly) ? 'none' : 'flex';
+
+      const tl = document.getElementById('t-login');
+      const tr = document.getElementById('t-reg');
+      const fl = document.getElementById('f-login');
+      const fr = document.getElementById('f-reg');
+      const ds = document.getElementById('durationSection');
+      const submitBtn = document.getElementById('mainSubmitBtn');
+
+      if (tl) tl.classList.toggle('on', t === 'login');
+      if (tr) tr.classList.toggle('on', t === 'register');
+
+      if (fl) fl.style.display = (t === 'login' && !openDurationOnly) ? 'block' : 'none';
+      if (fr) fr.style.display = (t === 'register' && !openDurationOnly) ? 'block' : 'none';
+      if (ds) ds.style.display = (t === 'login' || openDurationOnly) ? 'block' : 'none';
+
+      if (submitBtn) {
+        if (t === 'register') submitBtn.innerHTML = 'Continue →';
+        else submitBtn.innerHTML = openDurationOnly ? 'Confirm Reservation →' : 'Continue →';
+      }
+    }
+
+    function openReserveModal() {
+      if (!selSlot) return toast('Please select a slot from the map first!', 'info');
+      if (currentUser) {
+        swTab('login', true, true);
+        const submitBtn = document.getElementById('mainSubmitBtn');
+        if (submitBtn) submitBtn.innerHTML = 'Confirm Reservation →';
+        show('bookModal');
+      } else {
+        openAuth('register');
+        const submitBtn = document.getElementById('mainSubmitBtn');
+        if (submitBtn) submitBtn.innerHTML = 'Continue →';
+      }
+    }
+
+    function handleBookOrReg() {
+      const isLogin = document.getElementById('t-login').classList.contains('on');
+
+      if (isLogin) {
+        handleBook();
+      } else {
+        handleRegister();
+      }
+    }
+
+
+
+    async function simulatePay(method, specificBookingId = null) {
+      try {
+        let bookingToPay = activeBooking;
+        let amountToPay = 0;
+
+        // If specific ID is provided, find it in cache
+        if (specificBookingId) {
+          bookingToPay = window.userHistoryCache.find(b => b._id === specificBookingId);
+          if (!bookingToPay) throw new Error('Selected session not found.');
+          amountToPay = calculateCurrentCost(bookingToPay).cost;
+        } else {
+          if (!activeBooking) return toast('No active session.', 'error');
+          amountToPay = parseInt(document.getElementById('ud-cost').textContent.replace('₹', '')) || 10;
+        }
+
+        window.currentProcessingBookingId = bookingToPay._id;
+
+        toast('Initiating payment request...', 'info');
+        const res = await apiFetch('/payments/create-order', {
+          method: 'POST',
+          body: JSON.stringify({ bookingId: bookingToPay._id, amount: amountToPay, method: 'razorpay' })
+        });
+        const order = res.data;
+        window.currentPendingPaymentId = order.paymentId;
+
+        const rzp = new Razorpay({
+          key: order.key,
+          amount: order.amount * 100,
+          currency: "INR",
+          name: "Garuda Mall Parking",
+          description: `Parking Payment - Slot ${activeBooking.slot?.slotId}`,
+          order_id: order.orderId,
+          handler: async (resp) => {
+            const verifyRes = await apiFetch('/payments/verify', {
+              method: 'POST',
+              body: JSON.stringify({ paymentId: order.paymentId, ...resp })
+            });
+            if (verifyRes.success) handlePaymentSuccess();
+          },
+          theme: { color: "#D4AF37" }
+        });
+        rzp.open();
+      } catch (err) { toast(err.message, 'error'); }
+    }
+
+    async function verifyAppPayment() {
+      if (!window.currentPendingPaymentId) return toast('No pending payment found to verify.', 'error');
+      try {
+        toast('Verifying with server...', 'info');
+        const verifyRes = await apiFetch('/payments/verify', {
+          method: 'POST',
+          body: JSON.stringify({
+            paymentId: window.currentPendingPaymentId,
+            razorpay_payment_id: 'app_pay_' + Date.now(),
+            razorpay_signature: 'manual_qr_verified'
+          })
+        });
+        if (verifyRes.success) {
+          window.currentPendingPaymentId = null;
+          handlePaymentSuccess();
+        }
+      } catch (err) { toast(err.message, 'error'); }
+    }
+
+    async function handlePaymentSuccess() {
+      try {
+        const { data } = await apiFetch('/bookings/my-bookings');
+        window.userHistoryCache = data;
+
+        // Store the specific booking that was just paid for the manual download button
+        if (window.currentProcessingBookingId) {
+          window.lastPaidBooking = data.find(b => b._id === window.currentProcessingBookingId);
+        }
+      } catch (e) { console.warn('History refresh error:', e); }
+
+      hide('userDashModal');
+      show('paymentSuccessModal');
+      activeBooking = null;
+      window.currentProcessingBookingId = null;
+      selSlot = null;
+      const selBar = document.getElementById('selBar');
+      if (selBar) selBar.classList.remove('show');
+      initSlots();
+    }
+
+    function downloadReceipt(booking) {
+      if (!booking) return;
+      const { cost, duration } = calculateCurrentCost(booking);
+      const finalCost = booking.pricing?.actualCost || cost;
+
+      const receiptHTML = `
+        <html>
+        <head>
+          <title>Payment Receipt - Garuda Mall Parking</title>
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+            body { font-family: 'Inter', sans-serif; padding: 40px; color: #1a1a1a; background: #fff; }
+            .a4-page { width: 100%; max-width: 600px; margin: 0 auto; border: 1px solid #eee; padding: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+            .header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #D4AF37; padding-bottom: 20px; margin-bottom: 30px; }
+            .brand h1 { margin: 0; color: #D4AF37; font-size: 1.6rem; letter-spacing: 2px; }
+            .brand p { margin: 5px 0 0; font-size: 0.75rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+            .user-info { text-align: right; font-size: 0.85rem; color: #444; }
+            
+            .content { margin-top: 30px; }
+            .row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f5f5f5; font-size: 0.95rem; }
+            .label { color: #777; font-weight: 500; }
+            .val { font-weight: 700; color: #111; }
+            
+            .amount-box { background: #fdf9f0; padding: 25px; margin-top: 30px; border-radius: 8px; border-left: 5px solid #D4AF37; text-align: center; }
+            .amount-lbl { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #888; font-weight: 700; margin-bottom: 10px; display: block; }
+            .amount-val { font-size: 2.2rem; font-weight: 900; color: #D4AF37; }
+            
+            .footer { margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px; text-align: center; }
+            .footer p { font-size: 0.75rem; color: #999; margin: 5px 0; }
+            @media print { 
+              body { padding: 0; }
+              .a4-page { border: none; box-shadow: none; padding: 0; }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="a4-page">
+            <div class="header">
+              <div class="brand">
+                <h1>Garuda Mall Parking</h1>
+                <p>Payment Receipt — Official Receipt</p>
+              </div>
+              <div class="user-info">
+                <strong>Receipt ID:</strong> #${booking._id.substring(0, 8).toUpperCase()}
+              </div>
+            </div>
+
+            <div class="content">
+              <div class="row"><span class="label">Customer Name</span><span class="val">${currentUser?.name || 'Valued Guest'}</span></div>
+              <div class="row"><span class="label">Phone Number</span><span class="val">${currentUser?.phone || 'N/A'}</span></div>
+              <div class="row"><span class="label">Date</span><span class="val">${new Date(booking.entryTime).toLocaleDateString()}</span></div>
+              <div class="row"><span class="label">Check In Time</span><span class="val">${new Date(booking.entryTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span></div>
+            </div>
+
+            <div class="amount-box">
+              <span class="amount-lbl">Total Amount Paid</span>
+              <span class="amount-val">₹${finalCost}</span>
+            </div>
+
+            <div class="footer">
+              <p><strong>Garuda Mall Parking</strong></p>
+              <p>Nagarathpet, Bangalore — 560002</p>
+              <p style="margin-top:15px; font-size:0.65rem; color: #bbb;">Thank you for using our smart parking system.</p>
+            </div>
+          </div>
+          <script>window.onload = () => { window.print(); setTimeout(() => window.close(), 600); }<\/script>
+        </body>
+        </html>
+      `;
+      const win = window.open('', '_blank', 'width=800,height=900');
+      if (win) {
+        win.document.write(receiptHTML);
+        win.document.close();
+      } else {
+        toast('Popup blocked! Please allow popups to download your receipt.', 'error');
+      }
+    }
+
+    function toggleDashPay() {
+      const sec = document.getElementById('dashPaymentSection');
+      if (!sec) return;
+      const isHidden = sec.style.display === 'none';
+      sec.style.display = isHidden ? 'block' : 'none';
+      if (isHidden) {
+        const amt = document.getElementById('ud-cost').textContent.replace('₹', '');
+        document.getElementById('dash-amt-display').textContent = '₹' + amt;
+      }
+    }
+
+    async function adminLogin() {
+      const email = document.getElementById('adminUser').value;
+      const pass = document.getElementById('adminPass').value;
+      try {
+        const res = await apiFetch('/auth/login', { method: 'POST', body: JSON.stringify({ email, password: pass }) });
+        if (res.data.role !== 'admin') throw new Error('Not an admin');
+        currentUser = res.data;
+        localStorage.setItem('garuda-user', JSON.stringify(currentUser));
+
+        // Fetch global settings immediately on admin login
+        try {
+          const sRes = await apiFetch('/admin/settings');
+          window.parkingSettings = sRes.data;
+          if (typeof syncTransparentRates === 'function') syncTransparentRates(sRes.data);
+        } catch (e) { console.warn('Settings load error', e); }
+
+        hide('adminLoginModal'); populateAdmin(); show('adminModal');
+      } catch (err) { toast(err.message, 'error'); }
+    }
+
+    // ════════════════════════════════════════════════
+    //  ADMIN DASHBOARD & CONTROLS
+    // ════════════════════════════════════════════════
+    async function populateAdmin() {
+      try {
+        const { data } = await apiFetch('/admin/dashboard');
+        renderAdminStats(data);
+
+        // Initial page data fetch
+        await aPage('overview');
+      } catch (err) { toast(err.message, 'error'); }
+    }
+
+    function renderAdminStats(data) {
+      if (!data) return;
+      const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+      set('ad-rev', '₹' + (data.revenue?.today || 0));
+      set('ad-sess', data.sessionsToday || 0);
+      set('ad-avail', data.availableSlots || 0);
+      set('ad-users', data.totalUsers || 0);
+      set('ad-users-count', data.totalUsers || 0);
+    }
+
+    async function handleBook() {
+      try {
+        if (!currentUser) {
+          const phone = document.getElementById('loginPhone')?.value;
+          const pass = document.getElementById('loginPass')?.value;
+          const res = await apiFetch('/auth/login', { method: 'POST', body: JSON.stringify({ phone, password: pass }) });
+          currentUser = res.data;
+          localStorage.setItem('garuda-user', JSON.stringify(currentUser));
+          syncNav();
+          toast('Logged in successfully!', 'success');
+        }
+
+        if (!selSlot) { hide('bookModal'); openUserDashboard(); return; }
+
+        const { data: allSlots } = await apiFetch('/slots');
+        const dbSlot = allSlots.find(s => s.slotId === selSlot);
+        const duration = parseInt(document.getElementById('expectedDuration')?.value || 0);
+
+        const bookRes = await apiFetch('/bookings', {
+          method: 'POST',
+          body: JSON.stringify({
+            slotId: dbSlot._id,
+            vehicleNumber: currentUser.vehicles?.[0]?.number || 'KA-01-BK-9988',
+            vehicleType: selSlot[0] <= 'B' ? '2W' : '4W',
+            expectedDuration: duration
+          })
+        });
+
+        activeBooking = bookRes.data;
+        sessionMins = 0;
+        hide('bookModal');
+        toast('Slot booked!', 'success');
+        openUserDashboard();
+        initSlots();
+      } catch (err) { toast(err.message, 'error'); }
+    }
+
+
+
+    async function aPage(id, el) {
+      // Toggle sidebar active state
+      if (el) {
+        document.querySelectorAll('.anav-item').forEach(b => b.classList.remove('active'));
+        el.classList.add('active');
+      }
+
+      // Toggle page visibility
+      document.querySelectorAll('.admin-page').forEach(p => p.classList.remove('on'));
+      const target = document.getElementById('ap-' + id);
+      if (target) target.classList.add('on');
+
+      // Fetch specific page data
+      try {
+        if (id === 'users') {
+          const { data } = await apiFetch('/admin/users');
+          renderAdminUsers(data);
+        } else if (id === 'sessions') {
+          const { data } = await apiFetch('/admin/bookings');
+          window.allAdminBookings = data;
+          filterSessions('all'); // Initial render with caching enabled
+        } else if (id === 'overview') {
+          const { data } = await apiFetch('/admin/dashboard');
+          renderAdminStats(data);
+          // Render real active bookings on overview
+          const { data: bookings } = await apiFetch('/admin/bookings');
+          // STRICT FILTER: Only real active sessions, no fake fallbacks
+          const activeBookings = bookings.filter(b => b.status === 'active' && b.slot && b.user);
+          renderRecentBookings(activeBookings.slice(0, 10));
+
+          // Fix: Start the live price update timer for overview items
+          startAdminTableTimer(bookings);
+
+          await renderAdminActivity();
+        } else if (id === 'revenue') {
+          const { data } = await apiFetch('/admin/dashboard');
+          renderRevenueData(data.revenue);
+        } else if (id === 'settings') {
+          const { data } = await apiFetch('/admin/settings');
+          window.parkingSettings = data;
+          document.getElementById('r2w').value = data.pricing.rate2W;
+          document.getElementById('r4w').value = data.pricing.rate4W;
+        } else if (id === 'slots') {
+          initSlots(); // Re-sync slot visual map
+        }
+      } catch (err) { console.warn(`Page ${id} fetch error:`, err); }
+    }
+
+    function filterSessions(status) {
+      if (!window.allAdminBookings) return;
+      let filtered = window.allAdminBookings;
+      if (status !== 'all') {
+        filtered = window.allAdminBookings.filter(b => b.status === status);
+      }
+      renderAdminSessions(filtered);
+    }
+
+    function startAdminTableTimer(sessions) {
+      if (sessions.some(s => s.status === 'active')) {
+        if (window.adminTableTimer) clearInterval(window.adminTableTimer);
+        window.adminTableTimer = setInterval(() => {
+          sessions.forEach(s => {
+            if (s.status !== 'active') return;
+            const { cost, duration } = calculateCurrentCost(s);
+
+            // Update Sessions Table
+            const elST = document.getElementById(`sess-timer-${s._id}`);
+            const elSC = document.getElementById(`sess-cost-${s._id}`);
+            if (elST) elST.textContent = duration;
+            if (elSC) elSC.textContent = `₹${cost}`;
+
+            // Update Overview Table
+            const elOT = document.getElementById(`ov-timer-${s._id}`);
+            const elOC = document.getElementById(`ov-cost-${s._id}`);
+            if (elOT) elOT.textContent = duration;
+            if (elOC) elOC.textContent = `₹${cost}`;
+          });
+        }, 1000);
+      } else {
+        if (window.adminTableTimer) clearInterval(window.adminTableTimer);
+      }
+    }
+
+    function renderAdminUsers(users) {
+      const list = document.getElementById('usersTbl');
+      if (!list) return;
+      list.innerHTML = users.map(u => `
+        <tr>
+          <td style="font-weight:600">${u.name}</td>
+          <td>${u.phone || '—'}</td>
+          <td>${u.vehicles?.[0]?.number || '—'}</td>
+          <td>${u.vehicles?.[0]?.type || '—'}</td>
+          <td style="font-size:0.75rem;color:var(--text3)">${new Date(u.createdAt).toLocaleDateString()}</td>
+          <td><button class="btn btn-red btn-xs" onclick="aDeleteUser('${u._id}')">Terminate</button></td>
+        </tr>
+      `).join('') || '<tr><td colspan="6" style="text-align:center;padding:2rem;color:var(--text3)">No users found.</td></tr>';
+    }
+
+    async function aDeleteUser(id) {
+      if (!confirm('Are you sure you want to terminate this user permanently? All their profile data will be removed.')) return;
+      try {
+        await apiFetch(`/admin/users/${id}`, { method: 'DELETE' });
+        toast('User terminated successfully', 'success');
+        aPage('users');
+      } catch (e) { toast(e.message, 'error'); }
+    }
+
+    function renderAdminSessions(sessions) {
+      const list = document.getElementById('sessTbl');
+      if (!list) return;
+      const fmt = d => d ? new Date(d).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '—';
+
+      list.innerHTML = sessions.map(s => {
+        const { cost, duration } = calculateCurrentCost(s);
+        const isClosed = s.status === 'completed' || s.status === 'paid';
+        const displayStatus = isClosed ? 'SESSION END' : s.status.toUpperCase();
+        const displayCost = isClosed ? (s.pricing?.actualCost || cost) : cost;
+        const displayDuration = isClosed ? (s.duration || duration) : duration;
+
+        return `
+        <tr>
+          <td style="font-weight:600; font-size:0.85rem">${s.user?.name || 'Guest'}<br><small style="font-weight:400; color:var(--text3)">${s.user?.phone || ''}</small></td>
+          <td><span class="badge badge-gray">${s.slot?.slotId || '??'}</span><br><span style="font-size:0.7rem;color:var(--text2)">${s.vehicleNumber}</span></td>
+          <td style="font-size:0.75rem; color:var(--text3)">${fmt(s.entryTime)} - ${fmt(s.exitTime)}</td>
+          <td id="sess-timer-${s._id}" style="font-size:0.8rem; font-weight:500; font-family:monospace">${displayDuration}</td>
+          <td id="sess-cost-${s._id}" style="font-weight:700; color:var(--gold)">₹${displayCost}</td>
+          <td><span class="badge ${isClosed ? 'badge-green' : 'badge-gold'}">${displayStatus}</span></td>
+          <td style="white-space:nowrap">
+            <button class="btn btn-red btn-xs" onclick="aDeleteBooking('${s._id}')">🗑️</button>
+          </td>
+        </tr>`;
+      }).join('') || '<tr><td colspan="7" style="text-align:center;padding:2rem;color:var(--text3)">No sessions found.</td></tr>';
+
+      startAdminTableTimer(sessions);
+    }
+
+    async function aResetSlots() {
+      if (!confirm('Are you sure you want to reset all slots to available? This will clear all live sessions.')) return;
+      try {
+        await apiFetch('/admin/slots/reset', { method: 'POST' });
+        toast('All slots reset successfully!', 'success');
+        initSlots();
+        logActivity('Admin Action', 'Reset all 50 slots');
+      } catch (err) { toast(err.message, 'error'); }
+    }
+
+    async function saveRates() {
+      const r2w = parseInt(document.getElementById('r2w').value);
+      const r4w = parseInt(document.getElementById('r4w').value);
+      try {
+        const res = await apiFetch('/admin/settings', {
+          method: 'PUT',
+          body: JSON.stringify({ pricing: { rate2W: r2w, rate4W: r4w } })
+        });
+        window.parkingSettings = res.data;
+        syncTransparentRates(res.data);
+        toast('Parking rates updated globally!', 'success');
+        logActivity('Settings Update', `Rates changed to ₹${r2w}/hr (2W) and ₹${r4w}/hr (4W)`);
+      } catch (err) { toast(err.message, 'error'); }
+    }
+
+    function syncTransparentRates(data) {
+      if (!data || !data.pricing) return;
+      const { rate2W, rate4W } = data.pricing;
+
+      const set = (id, txt) => { const el = document.getElementById(id); if (el) el.textContent = txt; };
+
+      set('hero-rate-2w', `₹${rate2W}`);
+      set('hero-rate-4w', `₹${rate4W}`);
+      set('card-rate-2w', `₹${rate2W}`);
+      set('rate-4w-card', `₹${rate4W}`);
+
+      set('zone-rate-a', `Zone A — Two Wheelers · ₹${rate2W}/hr`);
+      set('zone-rate-b', `Zone B — Two Wheelers · ₹${rate2W}/hr`);
+      set('zone-rate-c', `Zone C — Four Wheelers · ₹${rate4W}/hr`);
+      set('zone-rate-d', `Zone D — Four Wheelers · ₹${rate4W}/hr`);
+      set('zone-rate-e', `Zone E — Four Wheelers · ₹${rate4W}/hr`);
+
+      // Update Cost Estimator
+      const est4W = document.getElementById('est-4w');
+      if (est4W) {
+        est4W.value = rate4W;
+        est4W.textContent = `Four-Wheeler — ₹${rate4W}/hr`;
+      }
+      const est2W = document.getElementById('est-2w');
+      if (est2W) {
+        est2W.value = rate2W;
+        est2W.textContent = `Two-Wheeler — ₹${rate2W}/hr`;
+      }
+      if (typeof recalc === 'function') recalc();
+    }
+
+    async function viewSessionDetails(id) {
+      if (window.modalTimer) clearInterval(window.modalTimer);
+      try {
+        const { data: bookings } = await apiFetch('/admin/bookings');
+        const s = bookings.find(b => b._id === id);
+        if (!s) return;
+
+        const body = document.getElementById('sessionDetailBody');
+        const renderBody = () => {
+          const isClosed = s.status === 'completed' || s.status === 'paid';
+          let cost = s.pricing?.actualCost || 0;
+          let durText = s.duration || '';
+
+          if (s.status === 'active') {
+            const sec = Math.floor((new Date() - new Date(s.entryTime)) / 1000);
+            const h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60), sc = sec % 60;
+            durText = `${h}h ${m}m ${sc}s`;
+            const setts = window.parkingSettings || { pricing: { rate2W: 10, rate4W: 30 } };
+            const rate = s.vehicleType === '4W' ? setts.pricing.rate4W : setts.pricing.rate2W;
+            cost = Math.max(rate, Math.ceil(sec / 3600) * rate);
+          }
+
+          body.innerHTML = `
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+                        <div>
+                            <h4 style="margin-bottom:.5rem;color:var(--text3);font-size:.7rem;text-transform:uppercase">User Information</h4>
+                            <p><strong>${s.user?.name || 'Guest'}</strong> ${s.user?.role === 'admin' ? '(Admin)' : ''}</p>
+                            <p style="color:var(--text2);font-size:.82rem">${s.user?.phone || 'N/A'}</p>
+                            <p style="color:var(--text2);font-size:.82rem;font-family:monospace">${s.user?.email || 'N/A'}</p>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom:.5rem;color:var(--text3);font-size:.7rem;text-transform:uppercase">Vehicle Information</h4>
+                            <p><strong>${s.vehicleNumber}</strong></p>
+                            <p style="color:var(--text2);font-size:.82rem">Type: ${s.vehicleType === '4W' ? 'Four Wheeler' : 'Two Wheeler'}</p>
+                            <p style="color:var(--text2);font-size:.82rem">Slot Assigned: <span class="badge badge-gray">${s.slot?.slotId || '??'}</span></p>
+                        </div>
+                    </div>
+                    <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div>
+                                <span style="font-size:.75rem;color:var(--text3)">${isClosed ? 'Total Duration' : 'Running Duration'}</span>
+                                <div style="font-weight:600">${durText}</div>
+                            </div>
+                            <div style="text-align:right">
+                                <span style="font-size:.75rem;color:var(--text3)">${isClosed ? 'Paid Amount' : 'Estimated Amount'}</span>
+                                <div style="font-weight:700;color:var(--gold);font-size:1.4rem">₹${cost}</div>
+                            </div>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;margin-top:1rem;align-items:center">
+                            <span style="font-size:.8rem">Session Status</span>
+                            <span class="badge ${s.status === 'active' ? 'badge-gold' : 'badge-green'}">${isClosed ? 'SESSION END' : s.status.toUpperCase()}</span>
+                        </div>
+                        ${isClosed ? `
+                        <div style="margin-top:1.2rem; background:rgba(var(--gold-rgb),0.05); padding:1rem; border-radius:8px; border-left:4px solid var(--gold)">
+                            <div style="font-size:0.7rem; color:var(--text3); text-transform:uppercase; margin-bottom:0.4rem">Payment Record</div>
+                            <div style="display:flex; justify-content:space-between">
+                                <span style="font-size:0.85rem">Transaction ID: #${s._id.substring(0, 8).toUpperCase()}</span>
+                                <span style="font-weight:700">₹${cost} Paid</span>
+                            </div>
+                        </div>
+                        ` : ''}
+                    </div>
+                `;
+        };
+
+        renderBody();
+        show('sessionDetailModal');
+
+        if (s.status === 'active') {
+          window.modalTimer = setInterval(renderBody, 1000);
+        }
+      } catch (e) { toast('Error loading details', 'error'); }
+    }
+
+    async function updateAdminPassword() {
+      const inputs = document.querySelectorAll('#ap-settings input[type="password"]');
+      const pass = inputs[1].value;
+      const confirm = inputs[2].value;
+
+      if (!pass || pass !== confirm) return toast('New passwords do not match!', 'error');
+      if (pass.length < 5) return toast('Password must be at least 5 characters', 'info');
+
+      try {
+        await apiFetch('/admin/settings', {
+          method: 'PUT',
+          body: JSON.stringify({ password: pass })
+        });
+        toast('Admin password updated successfully!', 'success');
+        logActivity('Admin Update', 'Primary Admin password changed');
+        // Clear inputs
+        inputs.forEach(i => i.value = '');
+      } catch (e) { toast(e.message, 'error'); }
+    }
+
+    function renderRevenueData(rev) {
+      if (!rev) return;
+      const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+      set('rev-today', '₹' + (rev.today || 0));
+      set('rev-weekly', '₹' + (rev.weekly || 0));
+      set('rev-monthly', '₹' + (rev.monthly || 0));
+      set('rev-alltime', '₹' + (rev.allTime || 0));
+
+      // Simple bar representation for last 14 days
+      const list = document.getElementById('revBars2');
+      if (list) {
+        const max = Math.max(rev.today, 1000);
+        list.innerHTML = `
+             <div style="display:flex;align-items:center;gap:1rem;font-size:0.7rem">
+               <span style="width:60px">Today</span>
+               <div class="rev-bar-wrap"><div class="rev-bar" style="width:${(rev.today / max) * 100}%"></div></div>
+               <span style="width:50px">₹${rev.today}</span>
+             </div>
+             <div style="color:var(--text3);padding:1rem;text-align:center;font-size:0.75rem">Historical daily logs will appear here as the system collects data.</div>
+           `;
+      }
+    }
+
+    function renderRecentBookings(bookings) {
+      const list = document.getElementById('recentTbl');
+      if (!list) return;
+      const fmt = d => d ? new Date(d).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '—';
+
+      list.innerHTML = bookings.map(s => {
+        const { cost, duration } = calculateCurrentCost(s);
+        const isClosed = s.status === 'completed' || s.status === 'paid';
+        const statusCls = isClosed ? 'badge-green' : (s.status === 'active' ? 'badge-gold' : 'badge-gray');
+        const displayStatus = isClosed ? 'SESSION END' : s.status.toUpperCase();
+        const displayCost = isClosed ? (s.pricing?.actualCost || cost) : cost;
+        const displayDuration = isClosed ? (s.duration || duration) : duration;
+
+        return `
+        <tr>
+          <td style="font-weight:600; font-size:0.8rem">${s.user?.name || 'Guest'}</td>
+          <td><span class="badge badge-gray">${s.slot?.slotId || '??'}</span> <small>${s.vehicleNumber}</small></td>
+          <td style="font-size:0.7rem; color:var(--text3)">${fmt(s.entryTime)} - ${fmt(s.exitTime)}</td>
+          <td id="ov-timer-${s._id}" style="font-size:0.75rem">${displayDuration}</td>
+          <td id="ov-cost-${s._id}" style="font-weight:700; color:var(--gold)">₹${displayCost}</td>
+          <td><span class="badge ${statusCls}">${displayStatus}</span></td>
+        </tr>
+      `}).join('') || '<tr><td colspan="6" style="text-align:center;padding:2rem;color:var(--text3)">No active bookings.</td></tr>';
+    }
+
+    async function aToggleSlot(id) {
+      try {
+        const { data: allSlots } = await apiFetch('/slots');
+        const slot = allSlots.find(s => s.slotId === id);
+        if (!slot) throw new Error('Slot ID not found in database record.');
+
+        const res = await apiFetch(`/slots/${slot._id}/toggle-block`, { method: 'PUT' });
+        toast(`Slot ${id} is now ${res.data.status}`, 'success');
+        initSlots();
+        logActivity('Admin Action', `Toggled slot ${id} to ${res.data.status}`);
+      } catch (err) { toast(err.message, 'error'); }
+    }
+
+    async function aResetSlots() {
+      if (!confirm('Are you sure? This will clear all active parkings and release all slots!')) return;
+      try {
+        await apiFetch('/admin/slots/reset', { method: 'POST' });
+        toast('All slots reset successfully', 'success');
+        initSlots();
+        logActivity('Admin Action', 'Reset all slots to available');
+      } catch (err) { toast(err.message, 'error'); }
+    }
+
+    function adminLogout() {
+      currentUser = null;
+      localStorage.removeItem('garuda-user');
+      hide('adminModal');
+      syncNav();
+      toast('Admin session ended.', 'info');
+    }
+
+    async function aClearAllLogs() {
+      if (!confirm('CRITICAL ACTION: This will delete ALL bookings, payments, and activity logs forever. Are you absolutely sure?')) return;
+      try {
+        const res = await apiFetch('/admin/clear-logs', { method: 'DELETE' });
+        toast(res.message, 'success');
+        aPage('overview');
+        initSlots();
+      } catch (err) { toast(err.message, 'error'); }
+    }
+
+    async function aDeleteBooking(id) {
+      if (!confirm('Are you sure you want to delete this parking record?')) return;
+      try {
+        await apiFetch(`/admin/bookings/${id}`, { method: 'DELETE' });
+        toast('Record deleted successfully', 'success');
+
+        // Re-fetch depending on which tab might be active or used
+        const { data: bookings } = await apiFetch('/admin/bookings');
+        renderAdminSessions(bookings);
+
+        // Also update overview if possible
+        const activeBookings = bookings.filter(b => b.status === 'active' && b.slot && b.user);
+        renderRecentBookings(activeBookings.slice(0, 10));
+
+        initSlots();
+      } catch (e) { toast(e.message, 'error'); }
+    }
+
+    async function logActivity(action, details) {
+      // In a real app, this would POST to /api/admin/activity
+      // For now, we manually fetch activities in renderAdminActivity
+      try {
+        // Optional: you could implement a dedicated endpoint for manual admin logs
+        console.log(`[ACTIVITY LOG] ${action}: ${details}`);
+      } catch (e) { }
+    }
+
+    async function renderAdminActivity() {
+      const list = document.getElementById('adminActivityList');
+      if (!list) return;
+      try {
+        const { data } = await apiFetch('/admin/activity');
+        if (!data || data.length === 0) {
+          list.innerHTML = '<div style="text-align:center;color:var(--text3);padding:2rem;font-size:.8rem">No recent activity.</div>';
+          return;
+        }
+        list.innerHTML = data.map(log => `
+          <div class="activity-item">
+            <div class="activity-time">${new Date(log.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+            <div class="activity-content">
+              <span class="activity-action">${log.action}</span>: ${log.details}
+              <div style="font-size:0.65rem;color:var(--text3)">by ${log.user?.name || 'System'}</div>
+            </div>
+          </div>
+        `).join('');
+      } catch (err) {
+        list.innerHTML = '<div style="text-align:center;color:var(--red2);padding:2rem;font-size:.8rem">Failed to load activity.</div>';
+      }
+    }
+
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+      recalc();
+      if (typeof renderAdminActivity === 'function') renderAdminActivity();
+      initSlots();
+    });
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(el => obs.observe(el));
+  </script>
+</body>
+
+</html>
